@@ -12,3 +12,6 @@ This module monitor/spy/listen on the serial communication between arduino and p
 Arduino -- TX --> RX: PC --> RX: LCD Module
 
 This string contains the machine position and her state. It will be parse and display on LCD, u can also choose display debug screen / work position / machine position with an Button on this device.
+
+[![solarized dualmode](https://raw.github.com/xpix/XStepperLCD/master/eagleUp/sketchup.JPG)]
+
