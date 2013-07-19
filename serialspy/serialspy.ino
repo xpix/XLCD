@@ -12,82 +12,100 @@
  */
 
 //#define DEBUG
-#include <TinyWireM.h>
+#include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
-#define LCD_ADDR        0x27  // I2C LCD Address
+#define LCD_ADDR        0x21  // I2C LCD Address
 #define BUTTON          1     // Button to control
 
 LiquidCrystal_I2C lcd(LCD_ADDR,16,2); // 16 x 2 Display
 
-int mchange = 0;
 //menu: 
 // m = display machine position
 // w = display work position
 // d = display debug display
 char menus[4] = "mwd";
+int mchange = 0;
 char option = menus[0]; // has default option
 int  menusize = (sizeof(menus)/sizeof(char *)); //array size
 
 void setup() 
 { 
-  TinyWireM.begin();
   Serial.begin(9600);
-
-  pinMode(BUTTON, INPUT);
+  Serial.println("XStepperLCD 0.1");
 
   lcd.init(); 
   lcd.backlight();
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("XstepperLCD 0.1");
+  Serial.println("Fertig");
+  Serial.print("Option: ");Serial.println(option);
+
   delay(2000);
 } 
 
+
+
 void loop() 
 { 
-  int buttonState = digitalRead(BUTTON);
-  // Button pressed
-  if(buttonState == HIGH){
-      mchange++;
-      if(mchange < menusize){
-         option = menus[mchange]; // one option higer
+  String buffer = "";
+  char character;
+
+  while(Serial.available() > 0) {
+      character = Serial.read();
+      if(character == '\n'){
+        Serial.println("Read: " + buffer);
+        parse_line(buffer);
+        buffer = "";
       } else {
-         mchange = 0;
-         option = menus[mchange]; // first option
+        buffer.concat(character);
       }
   }
+  
 
-  if (Serial.available()>0){
-    char letter = Serial.read();
-    String buffer = "";
-    if (int(letter)==13 || int(letter)==10 ){ //If Carriage return has been reached
-      // parse string and send text to LCD
-      parse_line(buffer);
-    } else {
-      // fill buffer
-      buffer += letter;
-    }
-  } //If mySerial.available
+  delay(300);
 }//LOOP
+
+String getValue(String data, char separator, int index)
+{
+  int found = 0;
+  int strIndex[] = {0, -1};
+  int maxIndex = data.length()-1;
+
+  for(int i=0; i<=maxIndex && found<=index; i++){
+    if(data.charAt(i)==separator || i==maxIndex){
+        found++;
+        strIndex[0] = strIndex[1]+1;
+        strIndex[1] = (i == maxIndex) ? i+1 : i;
+    }
+  }
+
+  return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
+}
 
 void parse_line( String line )
 {
   // <Idle,MPos:5.529,0.560,7.000,WPos:1.529,-5.440,-0.000>
-  line.replace("<", "");
-  line.replace(">", "");
+
   // State ..
-  String state = splitString(line,',',0);  
+  String state = getValue(getValue(line, ',', 0), '<', 1);  
+
+  // return if not state
+  if(state.length() == 0){
+    return;
+  } 
 
   // Machine position ...
-  String machinepos_x = splitString(line,',',1).replace("MPos:", "");
-  String machinepos_y = splitString(line,',',2);
-  String machinepos_z = splitString(line,',',3);  
+  String machinepos_x = getValue(getValue(line, ',', 1), ':', 1);
+  String machinepos_y = getValue(line, ',', 2);
+  String machinepos_z = getValue(line, ',', 3);
 
   // Working position ...
-  String workingpos_x = splitString(line,',',4).replace("WPos:", "");
-  String workingpos_y = splitString(line,',',5);
-  String workingpos_z = splitString(line,',',6);  
+  String workingpos_x = getValue(getValue(line, ',', 4), ':', 1);
+  String workingpos_y = getValue(line, ',', 5);
+  String workingpos_z = getValue(line, ',', 6);
+
 
   // Display on LCD ... 
   // lcd screen
@@ -98,52 +116,27 @@ void parse_line( String line )
   // XXX: to use a switch to display workpos or other things :)
   lcd.clear();
    if(option == 'm'){
-      lcd.setCursor(0,0); // letter, row
-      lcd.print(state);
-      lcd.setCursor(9,0);
-      lcd.print("X:" + machinepos_x);
-      lcd.setCursor(0,1);
-      lcd.print("Y:" + machinepos_y);
-      lcd.setCursor(9,1);
-      lcd.print("Z:" + machinepos_z);
+     lcd.setCursor(0,0); // letter, row
+     lcd.print(state);
+     lcd.setCursor(9,0);
+     lcd.print(machinepos_x);
+     lcd.setCursor(0,1);
+     lcd.print(machinepos_y);
+     lcd.setCursor(9,1);
+     lcd.print(machinepos_z);
    }
    if(option == 'w'){
       lcd.setCursor(0,0); // letter, row
       lcd.print(state);
       lcd.setCursor(9,0);
-      lcd.print("X:" + workingpos_x);
+      lcd.print(workingpos_x);
       lcd.setCursor(0,1);
-      lcd.print("Y:" + workingpos_y);
+      lcd.print(workingpos_y);
       lcd.setCursor(9,1);
-      lcd.print("Z:" + workingpos_z);
+      lcd.print(workingpos_z);
    }
    if(option == 'd'){
       // Debug Infos
       lcd.print("Debugscreen");
    }
 }
-
-String splitString(String s, char parser,int index){
-  String rs='\0';
-  int parserIndex = index;
-  int parserCnt=0;
-  int rFromIndex=0, rToIndex=-1;
-
-  while(index>=parserCnt){
-    rFromIndex = rToIndex+1;
-    rToIndex = s.indexOf(parser,rFromIndex);
-
-    if(index == parserCnt){
-      if(rToIndex == 0 || rToIndex == -1){
-        return '\0';
-      }
-      return s.substring(rFromIndex,rToIndex);
-    }
-    else{
-      parserCnt++;
-    }
-
-  }
-  return rs;
-}
-
