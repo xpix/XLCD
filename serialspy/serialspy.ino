@@ -12,6 +12,7 @@
  */
 
 //#define DEBUG
+#include <MemoryFree.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -42,6 +43,9 @@ void setup()
   Serial.println("Fertig");
   Serial.print("Option: ");Serial.println(option);
 
+   Serial.print("freeMemory()=");
+   Serial.println(freeMemory());
+
   delay(2000);
 } 
 
@@ -58,11 +62,14 @@ void loop()
         Serial.println("Read: " + buffer);
         parse_line(buffer);
         buffer = "";
+
+        Serial.print("freeMemory()=");
+        Serial.println(freeMemory());
+
       } else {
         buffer.concat(character);
       }
   }
-  
 
   delay(300);
 }//LOOP

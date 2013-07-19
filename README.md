@@ -3,15 +3,11 @@ XStepperLCD
 
 LCD Module for XStepper
 
-Sometimes ago we build the version 1.0 from XSTepper, to control CNC Machines with grbl. It's an all in one device, but to control this machine maybe headless we need first an LCD Display!
+Some time ago, we designed and built version 1.0 of Xstepper.  Unlike other existing GRBL-based CNC solutions, Xstepper is an all-in-one device.  The possibility of controlling the machine in a headless state may be possible, and the first step toward doing so is some sort of visual display.  This module aims at solving part of the problem!
 
-But how? The Friends they coded grbl have no space and time to include a library to display Data on an LCD interface, also they use ever pin from the arduino machine and here comes my Idea :)
+But how?  The good people coding GRBL don’t have the on-chip memory to code in an LCD interface for GRBL.  Add to that the severe lack of available IO and this seems to rule out this type of expansion.  However, there is always a workaround.
 
-This module monitor/spy/listen on the serial communication between arduino and pc. He search with an Attiny85 for a special String on the RX Line:
-
-Arduino -- TX --> RX: PC --> RX: LCD Module
-
-This string contains the machine position and her state. It will be parse and display on LCD, u can also choose display debug screen / work position / machine position with an Button on this device.
+This module spies on the serial communication between the arduino and PC using an ATtiny85.  Simultaneously the ATtimy polls the position of the spindle from the XStepper.  The returned data is then parsed and displayed on a local LCD.  You can choose to display the debug screen, work position or machine position using the on-board button.
 
 ![sketchup preview](https://raw.github.com/xpix/XStepperLCD/master/eagleUp/sketchup.JPG)
 
