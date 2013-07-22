@@ -1,8 +1,8 @@
 /* Prototype on Arduino UNO or compatible
  * SETUP:
  *
- *    Arduino TX from XStepper Board with 220ohm Resistor
- *    Arduino GND from XStepper Board 
+ *    Arduino RX from GRBL/XStepper Board TX with 220ohm Resistor
+ *    Arduino GND from GRBL/XStepper Board 
  *    Arduino A4 SDA  to I2C LCD Board 
  *    Arduino A5 SCL  to I2C LCD Board 
  *    Arduino VCC to  XLCD Board 
@@ -28,16 +28,20 @@
 
 //#define DEBUG
 //#include <MemoryFree.h>
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
-#include <SoftwareSerial.h>
+#include <Wire.h>                // I2C Communication (Attiny must use TinyWireM
+#include <LiquidCrystal_I2C.h>   // LCD over I2C
+#include <SoftwareSerial.h>      // listen on TX Line from GRBL to PC
 
 SoftwareSerial mySerial(10, -1); // RX, TX
 
 #define LCD_ADDR        0x21  // I2C LCD Address
 #define BUTTON          1     // Button to control
 
-LiquidCrystal_I2C lcd(LCD_ADDR,16,2); // 16 x 2 Display
+LiquidCrystal_I2C lcd(LCD_ADDR); // 16 x 2 Display
+
+// Set the pins on the I2C chip used for LCD connections:
+//                    addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
+// LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 //Button to change menu .. not realized yet
 //menu: 
@@ -51,6 +55,7 @@ int  menusize = (sizeof(menus)/sizeof(char *)); //array size
 
 void setup() 
 { 
+  lcd.begin(16,2); 
   lcd.init(); 
   lcd.backlight();
   lcd.clear();
