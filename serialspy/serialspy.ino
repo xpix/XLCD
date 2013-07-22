@@ -15,6 +15,9 @@
 #include <MemoryFree.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <SoftwareSerial.h>
+
+SoftwareSerial mySerial(10, -1); // RX, TX
 
 #define LCD_ADDR        0x21  // I2C LCD Address
 #define BUTTON          1     // Button to control
@@ -32,21 +35,20 @@ int  menusize = (sizeof(menus)/sizeof(char *)); //array size
 
 void setup() 
 { 
-  Serial.begin(9600);
-  Serial.println("XStepperLCD 0.1");
-
   lcd.init(); 
   lcd.backlight();
   lcd.clear();
   lcd.setCursor(0, 0);
+
+  Serial.begin(9600);
+  Serial.println("XStepperLCD 0.1");
+
   lcd.print("XstepperLCD 0.1");
   Serial.println("Fertig");
   Serial.print("Option: ");Serial.println(option);
-
-   Serial.print("freeMemory()=");
-   Serial.println(freeMemory());
-
   delay(2000);
+  lcd.clear();
+  mySerial.begin(9600);
 } 
 
 
@@ -56,22 +58,17 @@ void loop()
   String buffer = "";
   char character;
 
-  while(Serial.available() > 0) {
-      character = Serial.read();
+  while(mySerial.available() > 0) {
+      character = mySerial.read();
       if(character == '\n'){
         Serial.println("Read: " + buffer);
         parse_line(buffer);
         buffer = "";
-
-        Serial.print("freeMemory()=");
-        Serial.println(freeMemory());
-
       } else {
         buffer.concat(character);
       }
   }
-
-  delay(300);
+  delay(50);
 }//LOOP
 
 String getValue(String data, char separator, int index)
@@ -98,11 +95,6 @@ void parse_line( String line )
   // State ..
   String state = getValue(getValue(line, ',', 0), '<', 1);  
 
-  // return if not state
-  if(state.length() == 0){
-    return;
-  } 
-
   // Machine position ...
   String machinepos_x = getValue(getValue(line, ',', 1), ':', 1);
   String machinepos_y = getValue(line, ',', 2);
@@ -113,6 +105,10 @@ void parse_line( String line )
   String workingpos_y = getValue(line, ',', 5);
   String workingpos_z = getValue(line, ',', 6);
 
+  // return if not state
+  if(workingpos_z.length() == 0){
+    return;
+  } 
 
   // Display on LCD ... 
   // lcd screen
@@ -121,7 +117,7 @@ void parse_line( String line )
   // Y:0.000  Z:0.000
 
   // XXX: to use a switch to display workpos or other things :)
-  lcd.clear();
+  //lcd.clear();
    if(option == 'm'){
      lcd.setCursor(0,0); // letter, row
      lcd.print(state);
@@ -146,4 +142,5 @@ void parse_line( String line )
       // Debug Infos
       lcd.print("Debugscreen");
    }
+   delay(20);
 }
