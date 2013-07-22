@@ -1,3 +1,18 @@
+/* Prototype on Arduino UNO or compatible
+ * SETUP:
+ *
+ *    Arduino TX from XStepper Board with 220ohm Resistor
+ *    Arduino GND from XStepper Board 
+ *    Arduino A4 SDA  to I2C LCD Board 
+ *    Arduino A5 SCL  to I2C LCD Board 
+ *    Arduino VCC to  XLCD Board 
+ *    Arduino GND to  XLCD Board 
+ *
+ * NOTE! - It's very important to use pullups on the SDA & SCL lines!
+ * LiquidCrystal_I2C lib was modified for ATtiny - on Playground with TinyWireM lib.
+ * TinyWireM USAGE & CREDITS: - see TinyWireM.h
+ */
+
 /* ATtiny85 as an Serial Monitor to display information on LCD Display
  * SETUP:
  *
@@ -12,7 +27,7 @@
  */
 
 //#define DEBUG
-#include <MemoryFree.h>
+//#include <MemoryFree.h>
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 #include <SoftwareSerial.h>
@@ -24,6 +39,7 @@ SoftwareSerial mySerial(10, -1); // RX, TX
 
 LiquidCrystal_I2C lcd(LCD_ADDR,16,2); // 16 x 2 Display
 
+//Button to change menu .. not realized yet
 //menu: 
 // m = display machine position
 // w = display work position
@@ -48,7 +64,7 @@ void setup()
   Serial.print("Option: ");Serial.println(option);
   delay(2000);
   lcd.clear();
-  mySerial.begin(9600);
+  mySerial.begin(9600); // open serial spy line
 } 
 
 
@@ -58,10 +74,13 @@ void loop()
   String buffer = "";
   char character;
 
+  // Try to read from serial spy line and send
+  // this to normal Serial fro debug
   while(mySerial.available() > 0) {
       character = mySerial.read();
       if(character == '\n'){
         Serial.println("Read: " + buffer);
+        // try to parse this line
         parse_line(buffer);
         buffer = "";
       } else {
@@ -71,6 +90,8 @@ void loop()
   delay(50);
 }//LOOP
 
+// String subtext = getValue(line, ',', 2);
+// Split for strings, i.e. split at command an get the third value
 String getValue(String data, char separator, int index)
 {
   int found = 0;
@@ -113,34 +134,33 @@ void parse_line( String line )
   // Display on LCD ... 
   // lcd screen
   // |--------------|
-  // State    X:5.529
-  // Y:0.000  Z:0.000
+  // State  Z:555.529
+  // 000.000  000.000
 
   // XXX: to use a switch to display workpos or other things :)
   //lcd.clear();
    if(option == 'm'){
      lcd.setCursor(0,0); // letter, row
      lcd.print(state);
-     lcd.setCursor(9,0);
-     lcd.print(machinepos_x);
-     lcd.setCursor(0,1);
-     lcd.print(machinepos_y);
-     lcd.setCursor(9,1);
+     lcd.setCursor(8,0);
      lcd.print(machinepos_z);
+     lcd.setCursor(0,1);
+     lcd.print(machinepos_x);
+     lcd.setCursor(8,1);
+     lcd.print(machinepos_y);
    }
    if(option == 'w'){
       lcd.setCursor(0,0); // letter, row
       lcd.print(state);
-      lcd.setCursor(9,0);
-      lcd.print(workingpos_x);
-      lcd.setCursor(0,1);
-      lcd.print(workingpos_y);
-      lcd.setCursor(9,1);
+      lcd.setCursor(8,0);
       lcd.print(workingpos_z);
+      lcd.setCursor(0,1);
+      lcd.print(workingpos_x);
+      lcd.setCursor(8,1);
+      lcd.print(workingpos_y);
    }
    if(option == 'd'){
       // Debug Infos
       lcd.print("Debugscreen");
    }
-   delay(20);
 }
