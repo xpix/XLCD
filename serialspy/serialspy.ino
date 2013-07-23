@@ -29,6 +29,7 @@
 //#define DEBUG
 //#include <MemoryFree.h>
 #include <Wire.h>                // I2C Communication (Attiny must use TinyWireM
+#include <LCD.h>
 #include <LiquidCrystal_I2C.h>   // LCD over I2C
 #include <SoftwareSerial.h>      // listen on TX Line from GRBL to PC
 
@@ -37,11 +38,11 @@ SoftwareSerial mySerial(10, -1); // RX, TX
 #define LCD_ADDR        0x21  // I2C LCD Address
 #define BUTTON          1     // Button to control
 
-LiquidCrystal_I2C lcd(LCD_ADDR); // 16 x 2 Display
+//LiquidCrystal_I2C lcd(LCD_ADDR); // 16 x 2 Display
 
 // Set the pins on the I2C chip used for LCD connections:
 //                    addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
-// LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
+LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 //Button to change menu .. not realized yet
 //menu: 
@@ -55,19 +56,20 @@ int  menusize = (sizeof(menus)/sizeof(char *)); //array size
 
 void setup() 
 { 
+
   lcd.begin(16,2); 
-  lcd.init(); 
+  
   lcd.backlight();
   lcd.clear();
   lcd.setCursor(0, 0);
-
+  lcd.print("XstepperLCD 0.1");
+  
   Serial.begin(9600);
   Serial.println("XStepperLCD 0.1");
-
-  lcd.print("XstepperLCD 0.1");
-  Serial.println("Fertig");
+  
+  delay(1000);
+  
   Serial.print("Option: ");Serial.println(option);
-  delay(2000);
   lcd.clear();
   mySerial.begin(9600); // open serial spy line
 } 
@@ -92,7 +94,7 @@ void loop()
         buffer.concat(character);
       }
   }
-  delay(50);
+  delay(100);
 }//LOOP
 
 // String subtext = getValue(line, ',', 2);
