@@ -35,14 +35,16 @@
 
 SoftwareSerial mySerial(10, -1); // RX, TX
 
-#define LCD_ADDR        0x21  // I2C LCD Address
 #define BUTTON          1     // Button to control
 
 //LiquidCrystal_I2C lcd(LCD_ADDR); // 16 x 2 Display
 
+#define LCD_ADDR        0x27  // I2C LCD Address
+#define LCD_LETTERS  20
+#define LCD_ROWS      4
 // Set the pins on the I2C chip used for LCD connections:
 //                    addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
-LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
+LiquidCrystal_I2C lcd(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 //Button to change menu .. not realized yet
 //menu: 
@@ -57,7 +59,7 @@ int  menusize = (sizeof(menus)/sizeof(char *)); //array size
 void setup() 
 { 
 
-  lcd.begin(16,2); 
+  lcd.begin(LCD_LETTERS,LCD_ROWS); 
   
   lcd.backlight();
   lcd.clear();
@@ -131,7 +133,7 @@ void parse_line( String line )
   // Working position ...
   String workingpos_x = getValue(getValue(line, ',', 4), ':', 1);
   String workingpos_y = getValue(line, ',', 5);
-  String workingpos_z = getValue(line, ',', 6);
+  String workingpos_z = getValue(getValue(line, ',', 6), '>', 0);
 
   // return if not state
   if(workingpos_z.length() == 0){
@@ -145,26 +147,28 @@ void parse_line( String line )
   // 000.000  000.000
 
   // XXX: to use a switch to display workpos or other things :)
-  //lcd.clear();
+  // lcd.clear();
    if(option == 'm'){
      lcd.setCursor(0,0); // letter, row
-     lcd.print(state);
-     lcd.setCursor(8,0);
+     lcd.print(state + "            ");
+     lcd.setCursor((LCD_LETTERS-machinepos_z.length()),0);
      lcd.print(machinepos_z);
+
      lcd.setCursor(0,1);
      lcd.print(machinepos_x);
-     lcd.setCursor(8,1);
+     lcd.setCursor((LCD_LETTERS-machinepos_y.length()),1);
      lcd.print(machinepos_y);
    }
-   if(option == 'w'){
-      lcd.setCursor(0,0); // letter, row
-      lcd.print(state);
-      lcd.setCursor(8,0);
-      lcd.print(workingpos_z);
-      lcd.setCursor(0,1);
-      lcd.print(workingpos_x);
-      lcd.setCursor(8,1);
-      lcd.print(workingpos_y);
+   if(option == 'w' || LCD_ROWS > 2){
+     lcd.setCursor(0,2); // letter, row
+     lcd.print("WorkPos:            ");
+     lcd.setCursor((LCD_LETTERS-workingpos_z.length()),2);
+     lcd.print(workingpos_z);
+
+     lcd.setCursor(0,3);
+     lcd.print(workingpos_x);
+     lcd.setCursor((LCD_LETTERS-workingpos_y.length()),3);
+     lcd.print(workingpos_y);
    }
    if(option == 'd'){
       // Debug Infos
