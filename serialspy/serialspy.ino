@@ -1,68 +1,126 @@
 /* Prototype on Arduino UNO or compatible
  * Frank (xpix) Herrmann / 07/2013
  *
- *    Arduino RX from GRBL/XStepper Board TX with 220ohm Resistor
- *    Arduino GND from GRBL/XStepper Board 
- *    Arduino A4 SDA  to I2C LCD Board 
- *    Arduino A5 SCL  to I2C LCD Board 
- *    Arduino VCC to  XLCD Board 
- *    Arduino GND to  XLCD Board 
- *
  * NOTE! - It's very important to use pullups on the SDA & SCL lines!
- * LiquidCrystal_I2C lib was modified for ATtiny - on Playground with TinyWireM lib.
- * TinyWireM USAGE & CREDITS: - see TinyWireM.h
+
+  The buttons are numbered in follow schema with pins on buttons connector:
+  A = 1(3), 2(5), 3(7), 4(9), 5(11), 6(13), 7(15), 8(15), 9(17)
+  B = 11(6), 12(8), 13(10), 14(12), 15(14), 16(16), 17(18), 18(20)
+
+  if you connect a button on Pin12 and GND the onPress 
+  you will get button number 14 if pressed.
  */
 
-//#define DEBUG
+
+//
+// ---------- DEFINES -----------
+//
+// LCD
+//#define LCD_ADDR        0x27  // I2C LCD Address
+#define LCD_4BIT
+#define LCD_LETTERS     20    // how much letters in a row
+#define LCD_ROWS        4     // how much rows
+
+// Rotary Encoder
+#define ENC_A           2   // Encoder interupt pin
+#define ENC_B           A3  // Encoder second pin
+#define ENC_S           A4  // Encoder select pin
+
+// Buttons
+#define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
+#define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
+#define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
+#define BUTTON_NONE        0     // no pressed state
+// Measure Power on when pressed button and note this value here  
+// Buttons:            0   1   2    3    4    5    6    7
+int button_power[] = {32, 64, 96, 128, 256, 512, 868, 999}; // Power data for every pressed button
+
+
+//
+// ---------- INCLUDES -----------
+//
 //#include <MemoryFree.h>
-#include <Wire.h>                // I2C Communication (Attiny must use TinyWireM
-#include <LCD.h>
-#include <LiquidCrystal_I2C.h>   // LCD over I2C
 #include <SoftwareSerial.h>      // listen on TX Line from GRBL to PC
 #include <Timer.h>
 
-#define BUTTON          1     // Button to control
+// Rotary Encoder
+#if defined(ENC_A)
+  #include <Encoder.h>
+  Encoder myEncoder(ENC_A, ENC_B);
+#endif
 
-#define LCD_ADDR        0x27  // I2C LCD Address
-#define LCD_LETTERS  20
-#define LCD_ROWS      4
+
 // Set the pins on the I2C chip used for LCD connections:
 //                    addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
-LiquidCrystal_I2C lcd(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
+#if defined(LCD_4BIT)
+  #include <LiquidCrystal.h>   // LCD over I2C
+  LiquidCrystal myLCD(12, 8, 4, 5, 6, 7);
+#elif defined(LCD_ADDR)
+  #include <Wire.h>                // I2C Communication
+  #include <LCD.h>
+  #include <LiquidCrystal_I2C.h>   // LCD over I2C
+  LiquidCrystal_I2C myLCD(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
+#endif
 
-Timer t;
+Timer myTimer;
 SoftwareSerial mySerial(10, 11); // RX, TX
 
-//Button to change menu .. not realized yet
-//menu: 
-// m = display machine position
-// w = display work position
-// d = display debug display
-char menus[4] = "mwd";
-int mchange = 0;
-char option = menus[0]; // has default option
-int  menusize = (sizeof(menus)/sizeof(char *)); //array size
+//
+// ---------- ROUTINES -----------
+//
+
+
+/*--------------------------------------------------------------------------------------
+  onPress(int button)
+  Call some action if your button pressed, 
+--------------------------------------------------------------------------------------*/
+void onPress(int button){
+  switch( button )
+   {
+      case 1: // First button
+      {
+        // do something
+        break;
+      }
+      case 2: // Second button
+      {
+        // do something
+        break;
+      }
+      case 14: // some button
+      {
+        // do something
+        break;
+      }
+      // .... and so on :)
+      default: // First button
+      {
+         break;
+      }
+   };  
+
+}
+
+// ---------- Setup  -----------
 
 void setup() 
 { 
 
-  lcd.begin(LCD_LETTERS,LCD_ROWS); 
-  lcd.backlight();
-  lcd.clear();
-  lcd.setCursor(0, 0);
-  lcd.print("XstepperLCD 0.1");
-  lcd.clear();
+  myLCD.begin(LCD_LETTERS,LCD_ROWS); 
+  myLCD.backlight();
+  myLCD.clear();
+  myLCD.setCursor(0, 0);
+  myLCD.print("XstepperLCD 0.1");
+  myLCD.clear();
 
   // Register some events
   // getParserState get  all of the active gcode modes 
   // that the parser will interpret any incoming command
   // and display on the bottom side from LCD
-  int tickEvent = t.every(2000, getParserState);
+  int tickEvent = myTimer.every(2000, getParserState);
   
   Serial.begin(9600);   // open serial to PC
   Serial.println("XStepperLCD 0.1");
-  Serial.print("Option: ");
-  Serial.println(option);
   
   delay(1000);
 
@@ -70,12 +128,18 @@ void setup()
 }//SETUP
 
 
+// ---------- Loop  -----------
 
 void loop() 
 { 
   // Update events for timer lib
   t.update();
 
+  // on change buttons
+  if(byte button = ReadButtons()){
+    onPress(button);
+  }
+  
   // Try to read from serial PC line and send
   // this to grbl serial line
   String buffer = "";
@@ -107,6 +171,9 @@ void loop()
 
   delay(100);
 }//LOOP
+
+
+// ---------- Subroutines -----------
 
 // String subtext = getValue(line, ',', 2);
 // Split for strings, i.e. split at command an get the third value
@@ -156,35 +223,17 @@ void parse_line( String line )
   // 000.000  000.000
 
   // XXX: to use a switch to display workpos or other things :)
-  // lcd.clear();
-   if(option == 'm'){
-     // Display State and Machineposition in first 2 rows
-     lcd.setCursor(0,0); // letter, row
-     lcd.print(state + "            ");
-     lcd.setCursor((LCD_LETTERS-machinepos_z.length()),0);
-     lcd.print(machinepos_z);
+  // myLCD.clear();
+  // Display State and Machineposition in first 2 rows
+  myLCD.setCursor(0,0); // letter, row
+  myLCD.print(state + "            ");
+  myLCD.setCursor((LCD_LETTERS-machinepos_z.length()),0);
+  myLCD.print(machinepos_z);
 
-     lcd.setCursor(0,1);
-     lcd.print(machinepos_x);
-     lcd.setCursor((LCD_LETTERS-machinepos_y.length()),1);
-     lcd.print(machinepos_y);
-   }
-   if(option == 'w'){
-     // Display State and Workeposition in first 2 rows
-     lcd.setCursor(0,0); // letter, row
-     lcd.print(state + "            ");
-     lcd.setCursor((LCD_LETTERS-workingpos_z.length()),0);
-     lcd.print(workingpos_z);
-
-     lcd.setCursor(0,1);
-     lcd.print(workingpos_x);
-     lcd.setCursor((LCD_LETTERS-workingpos_y.length()),1);
-     lcd.print(workingpos_y);
-   }
-   if(option == 'd'){
-      // Debug Infos
-      lcd.print("Debugscreen");
-   }
+  myLCD.setCursor(0,1);
+  myLCD.print(machinepos_x);
+  myLCD.setCursor((LCD_LETTERS-machinepos_y.length()),1);
+  myLCD.print(machinepos_y);
 }
 
 
@@ -199,24 +248,29 @@ void getParserState()
         // parse myBuffer
         // [G0 G54 G17 G21 G90 G94 M0 M5 M9 T0 F500.000]
 
-        // State ..
         String feedrate = getValue(getValue(myBuffer, ' ', 10), ']', 0);  
         feedrate.replace("F","");
         feedrate.replace(".000","");
-        String toolnr = getValue(myBuffer, ' ', 9);  
+        feedrate = "F:" + feedrate; 
+
+        String toolnr = "T:" + getValue(myBuffer, ' ', 9);  
         int spindle = (getValue(myBuffer, ' ', 7) == "M5" ? 0 : 1);  
       
+        // Display on LCD ... 
+        // |--------------|
+        // Sp:off F:500 T:1
+
         // Spindle
-        lcd.setCursor(0,2); //third row
-        lcd.print("Sp:" + spindle ? "on" : "off");
+        myLCD.setCursor(0,2); //third row
+        myLCD.print("Sp:" + spindle ? "on " : "off");
 
         // Feed
-        lcd.setCursor(7,2); //third row
-        lcd.print("Feed:" + feedrate);
+        myLCD.setCursor(6,2); //third row
+        myLCD.print(feedrate);
 
         // Tool
-        lcd.setCursor(15,2); //third row
-        lcd.print(toolnr);
+        myLCD.setCursor((LCD_LETTERS-toolnr.length()),2);
+        myLCD.print(toolnr);
 
         // maybe add inch/mm display ... 
 
@@ -226,3 +280,40 @@ void getParserState()
       }
   }
 }
+
+/*--------------------------------------------------------------------------------------
+  ReadButtons()
+  Detect the button pressed and return the value
+  Uses global values buttonWas, buttonJustPressed, buttonJustReleased.
+--------------------------------------------------------------------------------------*/
+byte ReadButtons()
+{
+   // return no button pressed if the below checks don't write to btn
+   byte button = BUTTON_NONE;   
+   
+   //read the button ADC pin voltage first on A then on B
+   char buttonrow = 'A';
+   unsigned int buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
+   if(buttonVoltage <= 5 + BUTTONHYSTERESIS){
+      buttonrow = 'B';
+      buttonVoltage = analogRead( BUTTONS_B_ADC_PIN );
+   }
+   if(buttonVoltage <= 5 + BUTTONHYSTERESIS){
+      return button;
+   }
+
+   // test all values to discover button
+   for (int i = 0; i < 7 ; i = i + 1) {
+      if( buttonVoltage < ( button_power[i] + BUTTONHYSTERESIS ) )
+      {
+         button = i;
+      }
+   }   
+
+   if( buttonrow == 'B'){
+      button = button + 10;
+   }
+   
+   return( button );
+}
+
