@@ -117,8 +117,12 @@ void setup()
   // getParserState get  all of the active gcode modes 
   // that the parser will interpret any incoming command
   // and display on the bottom side from LCD
-  int tickEvent = myTimer.every(2000, getParserState);
-  
+  int tickEvent = myTimer.every(2000, getState);
+
+   
+  // This is the serial connect to PC, we get some commands
+  // but we can also print some additional information about this module
+  // and the parser from Clientprg will ignore this  
   Serial.begin(9600);   // open serial to PC
   Serial.println("XStepperLCD 0.1");
   
@@ -150,7 +154,7 @@ void loop()
 
         // try to parse this line
         // and display on LCD
-        parse_line(buffer);
+        parse_status_line(buffer);
 
         // send characters to grbl
         // as proxy, or change some 
@@ -194,7 +198,7 @@ String getValue(String data, char separator, int index)
   return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
 }
 
-void parse_line( String line )
+void parse_status_line( String line )
 {
   // <Idle,MPos:5.529,0.560,7.000,WPos:1.529,-5.440,-0.000>
 
@@ -238,7 +242,7 @@ void parse_line( String line )
 
 
 // send every second the command $G
-void getParserState()
+void getState()
 {
   String myBuffer = "";
   mySerial.println("$G");
