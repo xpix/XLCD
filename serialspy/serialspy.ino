@@ -15,16 +15,20 @@
 //
 // ---------- DEFINES -----------
 //
+// GRBL Serial connect pins
+#define GRBL_RX        8
+#define GRBL_TX        9 
+
 // LCD
 //#define LCD_ADDR        0x27  // I2C LCD Address
 #define LCD_4BIT
-#define LCD_LETTERS     20    // how much letters in a row
+#define LCD_LETTERS     16    // how much letters in a row
 #define LCD_ROWS        4     // how much rows
 
 // Rotary Encoder
-#define ENC_A           2   // Encoder interupt pin
-#define ENC_B           A3  // Encoder second pin
-#define ENC_S           A4  // Encoder select pin
+//#define ENC_A           2   // Encoder interupt pin
+//#define ENC_B           A3  // Encoder second pin
+//#define ENC_S           A4  // Encoder select pin
 
 // Buttons
 #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
@@ -40,7 +44,8 @@ int button_power[] = {32, 64, 96, 128, 256, 512, 868, 999}; // Power data for ev
 // ---------- INCLUDES -----------
 //
 //#include <MemoryFree.h>
-#include <SoftwareSerial.h>      // listen on TX Line from GRBL to PC
+//#include <SoftwareSerial.h>      // listen on TX Line from GRBL to PC
+#include <AltSoftSerial.h>
 #include <Timer.h>
 
 // Rotary Encoder
@@ -52,18 +57,22 @@ int button_power[] = {32, 64, 96, 128, 256, 512, 868, 999}; // Power data for ev
 
 // Set the pins on the I2C chip used for LCD connections:
 //                    addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
+#include <LCD.h>
 #if defined(LCD_4BIT)
   #include <LiquidCrystal.h>   // LCD over I2C
-  LiquidCrystal myLCD(12, 8, 4, 5, 6, 7);
+  LiquidCrystal myLCD(12, 11, 4, 5, 6, 7);
 #elif defined(LCD_ADDR)
   #include <Wire.h>                // I2C Communication
-  #include <LCD.h>
   #include <LiquidCrystal_I2C.h>   // LCD over I2C
   LiquidCrystal_I2C myLCD(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 #endif
 
-Timer myTimer;
-SoftwareSerial mySerial(10, 11); // RX, TX
+//Timer myTimer;
+//SoftwareSerial mySerial(GRBL_RX, GRBL_TX); // RX, TX
+AltSoftSerial mySerial;
+
+String LINE;
+
 
 //
 // ---------- ROUTINES -----------
@@ -106,29 +115,24 @@ void onPress(int button){
 void setup() 
 { 
 
+  pinMode(GRBL_RX, INPUT);
+  pinMode(GRBL_TX, OUTPUT);
+
   myLCD.begin(LCD_LETTERS,LCD_ROWS); 
-  myLCD.backlight();
   myLCD.clear();
   myLCD.setCursor(0, 0);
   myLCD.print("XstepperLCD 0.1");
-  myLCD.clear();
-
-  // Register some events
-  // getParserState get  all of the active gcode modes 
-  // that the parser will interpret any incoming command
-  // and display on the bottom side from LCD
-  int tickEvent = myTimer.every(2000, getState);
-
    
   // This is the serial connect to PC, we get some commands
   // but we can also print some additional information about this module
   // and the parser from Clientprg will ignore this  
-  Serial.begin(9600);   // open serial to PC
+  Serial.begin(57600);   // open serial to PC
   Serial.println("XStepperLCD 0.1");
   
   delay(1000);
 
   mySerial.begin(9600); // open serial to grbl
+  myLCD.clear();
 }//SETUP
 
 
@@ -137,43 +141,28 @@ void setup()
 void loop() 
 { 
   // Update events for timer lib
-  t.update();
+  // myTimer.update();
 
   // on change buttons
   if(byte button = ReadButtons()){
     onPress(button);
   }
-  
-  // Try to read from serial PC line and send
-  // this to grbl serial line
-  String buffer = "";
-  while(Serial.available() > 0) {
-      char character = Serial.read();
-      if(character == '\n'){
-        Serial.println("Read: " + buffer);
 
-        // try to parse this line
-        // and display on LCD
-        parse_status_line(buffer);
-
-        // send characters to grbl
-        // as proxy, or change some 
-        // commands and send to grbl
-        mySerial.println(buffer);
-        
-        buffer = "";
-      } else {
-        buffer.concat(character);
-      }
+  char c;
+  if (Serial.available()) {
+    c = Serial.read();
+    mySerial.print(c);
   }
-
-  // Get infos from grbl line 
-  // and send back to PC line
-  while(mySerial.available() > 0){
-    Serial.write(mySerial.read());
+  if (mySerial.available()) {
+    c = mySerial.read();
+    if(c == '\n'){
+      parseLine(LINE);
+      LINE = "";
+    } else {
+      LINE.concat(c);
+    }
+    Serial.print(c);
   }
-
-  delay(100);
 }//LOOP
 
 
@@ -198,10 +187,15 @@ String getValue(String data, char separator, int index)
   return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
 }
 
-void parse_status_line( String line )
+// Analyze every line and choose an action
+void parseLine(String line){
+  if( line.indexOf('<') == 0 )  parse_status_line(line);
+  if( line.indexOf('[') == 0 )  parse_state_line(line);
+}
+
+void parse_status_line(String line)
 {
   // <Idle,MPos:5.529,0.560,7.000,WPos:1.529,-5.440,-0.000>
-
   // State ..
   String state = getValue(getValue(line, ',', 0), '<', 1);  
 
@@ -240,49 +234,71 @@ void parse_status_line( String line )
   myLCD.print(machinepos_y);
 }
 
-
 // send every second the command $G
-void getState()
+void parse_state_line(String myBuffer)
 {
-  String myBuffer = "";
-  mySerial.println("$G");
-  while(mySerial.available() > 0) {
-      char character = mySerial.read();
-      if(character == '\n'){
-        // parse myBuffer
-        // [G0 G54 G17 G21 G90 G94 M0 M5 M9 T0 F500.000]
+  // parse myBuffer
+  //             mm                   TNr Feed
+  // [G0 G54 G17 G21 G90 G94 M0 M5 M9 T0 F500.000]
+  String move = getValue(myBuffer, ' ', 0);  
+  move.replace("[","");
+  move.replace("]","");
+  if(move == "G")  move = "RAP";
+  if(move == "G0") move = "RAP";
+  if(move == "G1") move = "LIN";
+  if(move == "G2") move = "CW ";
+  if(move == "G3") move = "CCW";
 
-        String feedrate = getValue(getValue(myBuffer, ' ', 10), ']', 0);  
-        feedrate.replace("F","");
-        feedrate.replace(".000","");
-        feedrate = "F:" + feedrate; 
+  String plane = getValue(myBuffer, ' ', 2);  
+  if(plane == "G17") plane = "XY";
+  if(plane == "G18") plane = "ZX";
+  if(plane == "G19") plane = "YZ";
 
-        String toolnr = "T:" + getValue(myBuffer, ' ', 9);  
-        int spindle = (getValue(myBuffer, ' ', 7) == "M5" ? 0 : 1);  
-      
-        // Display on LCD ... 
-        // |--------------|
-        // Sp:off F:500 T:1
+  String feedrate = getValue(myBuffer, ' ', 10);  
+  feedrate.replace(".000","");
 
-        // Spindle
-        myLCD.setCursor(0,2); //third row
-        myLCD.print("Sp:" + spindle ? "on " : "off");
+  String toolnr = getValue(myBuffer, ' ', 9);  
+  String spindle = (getValue(myBuffer, ' ', 7) == "M5" ? "1" : "0");  
 
-        // Feed
-        myLCD.setCursor(6,2); //third row
-        myLCD.print(feedrate);
+  String mode = (getValue(myBuffer, ' ', 3) == "G21" ? "MM" : "IN");  
+  String flow = getValue(myBuffer, ' ', 6);  
 
-        // Tool
-        myLCD.setCursor((LCD_LETTERS-toolnr.length()),2);
-        myLCD.print(toolnr);
+  // Display on LCD ... 
+  // |--------------|
+  // S1 T1 F1000
+  // MM LIN XY M1
 
-        // maybe add inch/mm display ... 
+  // Spindle
+  myLCD.setCursor(0,2); //third row
+  myLCD.print("S" + spindle);
 
-        myBuffer = "";
-      } else {
-        myBuffer.concat(character);
-      }
-  }
+  // Tool
+  myLCD.setCursor(3,2);
+  myLCD.print(toolnr);
+
+  // Feed
+  myLCD.setCursor(6,2); //third row
+  myLCD.print(feedrate);
+
+
+  // last row
+
+  // mm or inch
+  myLCD.setCursor(0,3);
+  myLCD.print(mode);
+
+  // Move mode
+  myLCD.setCursor(3,3);
+  myLCD.print(move);
+
+  // Plane
+  myLCD.setCursor(7,3);
+  myLCD.print(plane);
+
+  // Flow
+  myLCD.setCursor(10,3);
+  myLCD.print(flow);
+
 }
 
 /*--------------------------------------------------------------------------------------
@@ -320,4 +336,5 @@ byte ReadButtons()
    
    return( button );
 }
+
 
