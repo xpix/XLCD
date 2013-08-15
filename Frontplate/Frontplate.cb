@@ -230,11 +230,32 @@ F</text>
           <ModificationCount>40</ModificationCount>
           <mat m="Identity" />
         </circle>
+        <circle id="54" c="-110,107,0" d="7.5">
+          <ModificationCount>38</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="55" c="-70,107,0" d="7.5">
+          <ModificationCount>66</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="56" c="-90,107,0" d="7.5">
+          <ModificationCount>8</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>23</ModificationCount>
+          <mat m="Identity" />Resume</text>
+        <text id="58" p1="-95,96,0" p2="1,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>24</ModificationCount>
+          <mat m="Identity" />Hold</text>
+        <text id="59" p1="-77,96,0" p2="-7,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>25</ModificationCount>
+          <mat m="Identity" />Reset</text>
       </objects>
     </layer>
   </layers>
   <MachiningOptions>
-    <OutFile />
+    <OutFile>{$cbfile.name}.nc</OutFile>
     <FastPlungeHeight>0.2</FastPlungeHeight>
     <PostProcessor>Default</PostProcessor>
     <Stock>
@@ -293,6 +314,9 @@ F</text>
             <prim>51</prim>
             <prim>52</prim>
             <prim>53</prim>
+            <prim>54</prim>
+            <prim>56</prim>
+            <prim>55</prim>
           </primitive>
           <TargetDepth state="Value">-4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
@@ -408,6 +432,9 @@ F</text>
             <prim>38</prim>
             <prim>40</prim>
             <prim>49</prim>
+            <prim>57</prim>
+            <prim>58</prim>
+            <prim>59</prim>
           </primitive>
           <TargetDepth state="Default">-0.4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
