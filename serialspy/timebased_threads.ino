@@ -16,17 +16,17 @@
  * get GRBL position informations
  ************************************* 
  */
-  void simpleThread_setup(Loop_1)
+  void simpleThread_setup(getPositions)
   {
     // reset counter value
     g_thread_counter = 0;
     // output
   }  
 
-  boolean simpleThread_loop(Loop_1)
+  boolean simpleThread_loop(getPositions)
   {
     // output counter value
-    mySerial.println('?');
+    mySerial.print('?');
     
     // increment counter    
     g_thread_counter++;
@@ -40,17 +40,17 @@
  * get GRBL position informations
  ************************************* 
  */
-  void simpleThread_setup(Loop_2)
+  void simpleThread_setup(getStates)
   {
     // reset counter value
     g_thread_counter = 0;
     // output
   }  
 
-  boolean simpleThread_loop(Loop_2)
+  boolean simpleThread_loop(getStates)
   {
     // output counter value
-    mySerial.println('?');
+    mySerial.print("$G\n");
     
     // increment counter    
     g_thread_counter++;

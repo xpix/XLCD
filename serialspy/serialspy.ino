@@ -17,7 +17,7 @@
 #include <Encoder.h>
 #include <LCD.h>
 
-//#include <MemoryFree.h>
+#include <MemoryFree.h>
 //#include <SoftwareSerial.h>
 
 /* Prototype on Arduino UNO or compatible
@@ -32,7 +32,7 @@
  */
 
 // XXX: 
-// Test with SoftwareSerial, cuz AltSerial need Ports 8 and 9. 
+// Test with SoftwareSerial, because AltSerial need Ports 8 and 9. 
 // PCB Design use follow Connects
 //    PC => ( Soft: 9,10 ) => XLCD => (UART: 0,1) => XStepper
 
@@ -51,13 +51,26 @@
 #define LCD_rows                          4
 
 // Rotary Encoder
-//#define ENC_A           2   // Encoder interupt pin
+//#define ENC_A           2   // Encoder interrupt pin
 //#define ENC_B           A3  // Encoder second pin
 //#define ENC_S           A4  // Encoder select pin
 
+// Buttons
+#define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
+#define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
+#define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
+#define BUTTON_NONE        0     // no pressed state
+// Measure Power on when pressed button and note this value here
+// Buttons:            0   1   2    3    4    5    6    7
+int button_power[] = {32, 64, 96, 128, 256, 512, 868, 999}; // Power data for every pressed button
+byte buttonJustPressed  = false;         //this will be true after a ReadButtons() call if triggered
+byte buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
+byte buttonWas          = BUTTON_NONE;   //used by ReadButtons() for detection of button events   
+
 String LINE;
 String CMDLINE;
-boolean XMENU = false;
+char GRBL_FIRST_CHAR;
+char PC_FIRST_CHAR;
 
 /* 
  * ===============================================
@@ -71,8 +84,8 @@ boolean XMENU = false;
 simpleThread_init(_sT_cnt);   // init threads
 
 // Describe threads
-simpleThread_new_timebased_static  (_sT_P1  , _sT_millis, 1000, _sT_start  , Loop_1); // get position info (?)
-simpleThread_new_timebased_static  (_sT_P2  , _sT_millis, 2000, _sT_start  , Loop_2); // get state info ($G)
+simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_start , getPositions);	// get position info (?)
+simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis,10000, _sT_stop  , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
 
 AltSoftSerial mySerial;
 
@@ -83,8 +96,8 @@ AltSoftSerial mySerial;
 
 // All inits for LCD control
 #if defined(LCD_4BIT)
-   #include <LiquidCrystal.h>   // LCD
-   LiquidCrystal myLCD(12, 11, 4, 5, 6, 7);
+   #include <LiquidCrystalFast.h>   // LCD
+   LiquidCrystalFast myLCD(12, 11, 4, 5, 6, 7);
 #elif defined(LCD_ADDR)
    #include <Wire.h>                // I2C Communication
    #include <LiquidCrystal_I2C.h>   // LCD over I2C
@@ -107,22 +120,25 @@ void setup()
   /* init threads */
   simpleThread_initSetup(_sT_cnt);
 
+  myLCD.begin(16,4); // letter, row
+
   myLCD.setCursor(0,0); // letter, row
-  myLCD.print("XLCD 0.1");
+  myLCD.print(F("XLCD 0.1>"));
   myLCD.setCursor(0,1); // letter, row
-  myLCD.print("Connect ... ");
+  myLCD.print(F("Connect ... "));
 
   // This is the serial connect to PC, we get some commands
   // but we can also print some additional information about this module
-  // and the parser from Clientprogram will ignore this  
-  Serial.begin(57600);   // open serial to PC
-  Serial.println("XLCD 0.1");
-  Serial.println("All commands for XLCD start with a colon ':'");
-  Serial.println("Call help with ':?'");
+  // and the parser from Client program will ignore this  
+  Serial.begin(9600);   // open serial to PC
+  Serial.println(F("<XLCD 0.1>"));
+  Serial.println(F("<All commands for XLCD start with a colon ':'>"));
+  Serial.println(F("<Call help with ':?'>"));
   
   delay(1000);
 
   mySerial.begin(9600); // open serial to grbl
+  myLCD.clear();
 }//SETUP
 
 
@@ -130,41 +146,58 @@ void setup()
 /*  ---------- Loop ----------- */
 void loop() 
 { 
+  // Jobs
+   simpleThread_run(_sT_priority);
 
-  /* calls the threads */
-  simpleThread_run(_sT_priority);
+  // try to read a button
+   byte button = ReadButton();
+   if( buttonJustPressed || buttonJustReleased ){
+      // action ...
+   }
 
-  char c;
-  // Get data from PC and send to GRBL
-  if (Serial.available()) {
-    c = Serial.read();
-    // check if a xlcd command
-    if(CMDLINE.length() == 0 && c == ':'){
-      XMENU = true;
-    }
-    // send only if not a XLCD command
-    if(!XMENU)
-      mySerial.print(c);
-
-    // end of row, parse command
-    if(c == '\n'){
-      parsePCCommand(CMDLINE);
-      CMDLINE = "";
-      XMENU = false;
-    } else {
-      CMDLINE.concat(c);
-    }
-  }
-  // Get data from GRBL and send to PC
+  // Get data from GRBL ==> PC
   if (mySerial.available()) {
-    c = mySerial.read();
+    char c = mySerial.read();
+
+    // save first char in a line
+    if(LINE.length() == 0)
+      GRBL_FIRST_CHAR = c;
+
+    // dont send all line start with a '['
+    // (UniversalGcodeSender dont like it)
+    if(PC_FIRST_CHAR != '[')
+      Serial.print(c);
+
+    // wait for a complete line 
+    // and parse it
     if(c == '\n'){
       parseGrblLine(LINE);
       LINE = "";
     } else {
       LINE.concat(c);
     }
-    Serial.print(c);
+  }
+
+  // Get data from PC ==> GRBL
+  if (Serial.available()) {
+    char c = Serial.read();
+
+    // save first char in a line
+    if(CMDLINE.length() == 0)
+      PC_FIRST_CHAR = c;
+
+    // dont send all line start with a colon(XLCD Commands)
+    if(PC_FIRST_CHAR != ':')
+      mySerial.print(c);
+
+    // wait for a complete line
+    // and parse it
+    if(c == '\n'){
+      parsePCCommand(CMDLINE);
+      CMDLINE = "";
+    } else {
+      CMDLINE.concat(c);
+    }
   }
 }//LOOP
 
@@ -196,14 +229,13 @@ void parsePCCommand(String line){
 
   // All commands with an ':' at start can control XLCD 
   if( line.indexOf(':') == 0 )  parse_command_line(line);
-  Serial.println("ok");
 }
 
 // Analyze every line and choose an action
 void parseGrblLine(String line){
   line.replace("\r","");
 
-  if( line.indexOf('<') == 0 )  return parse_status_line(line);
-  if( line.indexOf('[') == 0 )  return parse_state_line(line);
+  if( line.indexOf('<') == 0 )  parse_status_line(line);
+  if( line.indexOf('[') == 0 )  parse_state_line(line);
 }
 
