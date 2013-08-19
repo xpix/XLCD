@@ -61,8 +61,9 @@
 #define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
 #define BUTTON_NONE        0     // no pressed state
 // Measure Power on when pressed button and note this value here
+// use resistor network 680 Ohm
 // Buttons:            0   1   2    3    4    5    6    7
-int button_power[] = {32, 64, 96, 128, 256, 512, 868, 999}; // Power data for every pressed button
+int button_power[] = {30, 262, 415, 517, 589, 643, 685, 718}; // Power data for every pressed button
 byte buttonJustPressed  = false;         //this will be true after a ReadButtons() call if triggered
 byte buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
 byte buttonWas          = BUTTON_NONE;   //used by ReadButtons() for detection of button events   
@@ -84,8 +85,8 @@ char PC_FIRST_CHAR;
 simpleThread_init(_sT_cnt);   // init threads
 
 // Describe threads
-simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_start , getPositions);	// get position info (?)
-simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis,10000, _sT_stop  , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
+simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_stop , getPositions);	// get position info (?)
+simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis,10000, _sT_stop , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
 
 AltSoftSerial mySerial;
 
@@ -123,7 +124,7 @@ void setup()
   myLCD.begin(16,4); // letter, row
 
   myLCD.setCursor(0,0); // letter, row
-  myLCD.print(F("XLCD 0.1>"));
+  myLCD.print(F("XLCD 0.1"));
   myLCD.setCursor(0,1); // letter, row
   myLCD.print(F("Connect ... "));
 
@@ -151,8 +152,14 @@ void loop()
 
   // try to read a button
    byte button = ReadButton();
-   if( buttonJustPressed || buttonJustReleased ){
+   if(button && (buttonJustPressed || buttonJustReleased) ){
       // action ...
+	Serial.print("Button: ");
+	Serial.println(button);
+	Serial.print("pressed: ");
+	Serial.println(buttonJustPressed);
+	Serial.print("released: ");
+	Serial.println(buttonJustReleased);
    }
 
   // Get data from GRBL ==> PC

@@ -16,25 +16,23 @@ byte ReadButton()
 {
    // return no button pressed if the below checks don't write to btn
    byte button = BUTTON_NONE;   
+
+	buttonJustPressed  = false;
+	buttonJustReleased = false;
+
    
    //read the button ADC pin voltage first on A then on B
    char buttonrow = 'A';
    unsigned int buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
-   if(buttonVoltage <= 5 + BUTTONHYSTERESIS){
-      buttonrow = 'B';
-      buttonVoltage = analogRead( BUTTONS_B_ADC_PIN );
+   if(buttonVoltage <= 1000 + BUTTONHYSTERESIS){
+	   // test all values to discover button
+	   for (int i = 8; i > 0 ; i--) {
+		  if( buttonVoltage < ( button_power[i] - BUTTONHYSTERESIS ) )
+		  {
+			 button = i;
+		  }
+	   }   
    }
-   if(buttonVoltage <= 5 + BUTTONHYSTERESIS){
-      return button;
-   }
-
-   // test all values to discover button
-   for (int i = 0; i < 7 ; i = i + 1) {
-      if( buttonVoltage < ( button_power[i] + BUTTONHYSTERESIS ) )
-      {
-         button = i;
-      }
-   }   
 
    if( buttonrow == 'B'){
       button = button + 10;
