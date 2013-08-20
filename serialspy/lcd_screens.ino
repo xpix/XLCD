@@ -7,9 +7,18 @@
  * Last edit: 30.08.2013
  */ 
 
+unsigned long last_status = 0;
+
 void parse_status_line(String line)
 {
    // <Idle,MPos:5.529,0.560,7.000,WPos:1.529,-5.440,-0.000>
+
+   // analyze last call time and ignore this event if last time smaller as interval
+   if(millis() - last_status < simpleThread_dynamic_getLoopTime(getPositions)) 
+      return;
+
+   last_status = millis();
+
    // State ..
    String state = getValue(getValue(line, ',', 0), '<', 1);
 

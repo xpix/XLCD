@@ -16,7 +16,7 @@ void setinterval(String line);
 void resetDevice();
 void memoryfree();
 void about();
-void call_button(int number);
+void call_button(byte number);
 void call_button_1();
 void call_button_2();
 void call_button_3();

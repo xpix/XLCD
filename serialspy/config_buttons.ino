@@ -7,7 +7,7 @@
  * Last edit: 30.08.2013
  */ 
 
-void call_button(int number){
+void call_button(byte number){
    switch (number)
    {
       case 1: call_button_1(); break;
@@ -39,7 +39,7 @@ void call_button(int number){
 
 void call_button_1() {
    // Example call Homing
-   mySerial.print("$H\n");
+   grblSerial.print("$H\n");
    
    // Display action on LCD
    myLCD.clear();
@@ -48,7 +48,7 @@ void call_button_1() {
 
 void call_button_2() {
    // example call for X+10
-   mySerial.print("G0 X10\n");
+   grblSerial.print("G0 X10\n");
 };
    
 void call_button_3(){ };

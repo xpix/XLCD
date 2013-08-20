@@ -130,70 +130,60 @@
             <p b="0.41421356237309503">-57,6,0</p>
           </pts>
         </rect>
-        <circle id="23" c="-41,101,0" d="7.5">
-          <ModificationCount>140</ModificationCount>
+        <circle id="25" c="-20,94,0" d="7.5">
+          <ModificationCount>268</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="24" c="-21,101,0" d="7.5">
-          <ModificationCount>115</ModificationCount>
+        <circle id="26" c="-40,94,0" d="7.5">
+          <ModificationCount>273</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="25" c="-21,84,0" d="7.5">
-          <ModificationCount>147</ModificationCount>
+        <circle id="27" c="-20,54,0" d="7.5">
+          <ModificationCount>337</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="26" c="-41,84,0" d="7.5">
-          <ModificationCount>147</ModificationCount>
+        <circle id="28" c="-40,54,0" d="7.5">
+          <ModificationCount>342</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="27" c="-21,50,0" d="7.5">
-          <ModificationCount>206</ModificationCount>
+        <circle id="29" c="-40,74,0" d="7.5">
+          <ModificationCount>380</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="28" c="-41,50,0" d="7.5">
-          <ModificationCount>206</ModificationCount>
+        <circle id="30" c="-20,74,0" d="7.5">
+          <ModificationCount>375</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="29" c="-41,67,0" d="7.5">
-          <ModificationCount>195</ModificationCount>
+        <circle id="31" c="-20,14,0" d="7.5">
+          <ModificationCount>333</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="30" c="-21,67,0" d="7.5">
-          <ModificationCount>195</ModificationCount>
+        <circle id="32" c="-40,14,0" d="7.5">
+          <ModificationCount>356</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="31" c="-21,16,0" d="7.5">
-          <ModificationCount>210</ModificationCount>
+        <circle id="33" c="-40,34,0" d="7.5">
+          <ModificationCount>331</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="32" c="-41,16,0" d="7.5">
-          <ModificationCount>228</ModificationCount>
+        <circle id="34" c="-20,34,0" d="7.5">
+          <ModificationCount>326</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="33" c="-41,33,0" d="7.5">
-          <ModificationCount>201</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <circle id="34" c="-21,33,0" d="7.5">
-          <ModificationCount>201</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <text id="35" p1="-49,12,0" p2="70,-40,0" Height="8" Font="Agency FB" linespace="1.8" align="bottom,center">
-          <ModificationCount>285</ModificationCount>
+        <text id="35" p1="-48,10,0" p2="71,-42,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
+          <ModificationCount>424</ModificationCount>
           <mat m="Identity" />1
 2
 3
 4
-5
-6</text>
-        <text id="36" p1="-30,12,0" p2="89,-40,0" Height="8" Font="Agency FB" linespace="1.8" align="bottom,center">
-          <ModificationCount>97</ModificationCount>
+5</text>
+        <text id="36" p1="-29,10,0" p2="90,-42,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
+          <ModificationCount>236</ModificationCount>
           <mat m="Identity" />A
 B
 C
 D
-E
-F</text>
+E</text>
         <rect id="38" Closed="true" p="-121,94,0" w="61" h="18" radius="2">
           <ModificationCount>12</ModificationCount>
           <mat m="Identity" />
@@ -208,17 +198,54 @@ F</text>
             <p b="0.41421356237309503">-121,96,0</p>
           </pts>
         </rect>
-        <text id="39" p1="-119,97,0" p2="-8,-3,0" Height="12" Font="Agency FB" align="bottom,left">
-          <ModificationCount>51</ModificationCount>
-          <mat m="Identity" />XLCD 0.1 2013</text>
         <text id="40" p1="-90,28,0" p2="-7,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>33</ModificationCount>
+          <ModificationCount>146</ModificationCount>
           <mat m="Identity" />2</text>
+        <text id="49" p1="-126,28,0" p2="-43,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
+          <ModificationCount>67</ModificationCount>
+          <mat m="6.12303176911189E-17 1 0 0 -1 6.12303176911189E-17 0 0 0 0 1 0 -83 155 0 1" />2</text>
+        <circle id="50" c="-154,109,0" d="5">
+          <ModificationCount>23</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="51" c="-155,5,0" d="5">
+          <ModificationCount>47</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="52" c="-6,5,0" d="5">
+          <ModificationCount>40</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="53" c="-5,109,0" d="5">
+          <ModificationCount>40</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="54" c="-110,107,0" d="7.5">
+          <ModificationCount>38</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="55" c="-70,107,0" d="7.5">
+          <ModificationCount>66</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="56" c="-90,107,0" d="7.5">
+          <ModificationCount>8</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>23</ModificationCount>
+          <mat m="Identity" />Resume</text>
+        <text id="58" p1="-95,96,0" p2="1,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>24</ModificationCount>
+          <mat m="Identity" />Hold</text>
+        <text id="59" p1="-77,96,0" p2="-7,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>25</ModificationCount>
+          <mat m="Identity" />Reset</text>
       </objects>
     </layer>
   </layers>
   <MachiningOptions>
-    <OutFile />
+    <OutFile>{$cbfile.name}.nc</OutFile>
     <FastPlungeHeight>0.2</FastPlungeHeight>
     <PostProcessor>Default</PostProcessor>
     <Stock>
@@ -254,8 +281,6 @@ F</text>
           <SpindleRange state="Default">0</SpindleRange>
           <VelocityMode state="Default">Undefined</VelocityMode>
           <primitive>
-            <prim>23</prim>
-            <prim>24</prim>
             <prim>25</prim>
             <prim>26</prim>
             <prim>27</prim>
@@ -273,6 +298,13 @@ F</text>
             <prim>7</prim>
             <prim>6</prim>
             <prim>4</prim>
+            <prim>50</prim>
+            <prim>51</prim>
+            <prim>52</prim>
+            <prim>53</prim>
+            <prim>54</prim>
+            <prim>56</prim>
+            <prim>55</prim>
           </primitive>
           <TargetDepth state="Value">-4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
@@ -387,6 +419,10 @@ F</text>
             <prim>22</prim>
             <prim>38</prim>
             <prim>40</prim>
+            <prim>49</prim>
+            <prim>57</prim>
+            <prim>58</prim>
+            <prim>59</prim>
           </primitive>
           <TargetDepth state="Default">-0.4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>

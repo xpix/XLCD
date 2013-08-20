@@ -803,18 +803,32 @@ vm.platformname.name=
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="MENU_FUNCTION.ino">
+    <None Include="buttons_thread.ino">
       <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Visual Micro\.serialspy.vsarduino.h">
+    </None>
+    <None Include="commands.ino">
       <SubType>compile</SubType>
-    </Compile>
+    </None>
+    <None Include="config_buttons.ino">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="lcd_screens.ino">
+      <SubType>compile</SubType>
+    </None>
     <None Include="serialspy.ino">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="timebased_threads.ino">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Visual Micro\.serialspy.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

@@ -208,17 +208,54 @@ F</text>
             <p b="0.41421356237309503">-121,96,0</p>
           </pts>
         </rect>
-        <text id="39" p1="-119,97,0" p2="-8,-3,0" Height="12" Font="Agency FB" align="bottom,left">
-          <ModificationCount>51</ModificationCount>
-          <mat m="Identity" />XLCD 0.1 2013</text>
         <text id="40" p1="-90,28,0" p2="-7,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>33</ModificationCount>
+          <ModificationCount>146</ModificationCount>
           <mat m="Identity" />2</text>
+        <text id="49" p1="-126,28,0" p2="-43,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
+          <ModificationCount>67</ModificationCount>
+          <mat m="6.12303176911189E-17 1 0 0 -1 6.12303176911189E-17 0 0 0 0 1 0 -83 155 0 1" />2</text>
+        <circle id="50" c="-154,109,0" d="5">
+          <ModificationCount>23</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="51" c="-155,5,0" d="5">
+          <ModificationCount>47</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="52" c="-6,5,0" d="5">
+          <ModificationCount>40</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="53" c="-5,109,0" d="5">
+          <ModificationCount>40</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="54" c="-110,107,0" d="7.5">
+          <ModificationCount>38</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="55" c="-70,107,0" d="7.5">
+          <ModificationCount>66</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="56" c="-90,107,0" d="7.5">
+          <ModificationCount>8</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>23</ModificationCount>
+          <mat m="Identity" />Resume</text>
+        <text id="58" p1="-95,96,0" p2="1,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>24</ModificationCount>
+          <mat m="Identity" />Hold</text>
+        <text id="59" p1="-77,96,0" p2="-7,0,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>25</ModificationCount>
+          <mat m="Identity" />Reset</text>
       </objects>
     </layer>
   </layers>
   <MachiningOptions>
-    <OutFile />
+    <OutFile>{$cbfile.name}.nc</OutFile>
     <FastPlungeHeight>0.2</FastPlungeHeight>
     <PostProcessor>Default</PostProcessor>
     <Stock>
@@ -273,6 +310,13 @@ F</text>
             <prim>7</prim>
             <prim>6</prim>
             <prim>4</prim>
+            <prim>50</prim>
+            <prim>51</prim>
+            <prim>52</prim>
+            <prim>53</prim>
+            <prim>54</prim>
+            <prim>56</prim>
+            <prim>55</prim>
           </primitive>
           <TargetDepth state="Value">-4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
@@ -387,6 +431,10 @@ F</text>
             <prim>22</prim>
             <prim>38</prim>
             <prim>40</prim>
+            <prim>49</prim>
+            <prim>57</prim>
+            <prim>58</prim>
+            <prim>59</prim>
           </primitive>
           <TargetDepth state="Default">-0.4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
@@ -456,7 +504,7 @@ F</text>
       </Nesting>
     </part>
   </parts>
-  <ShowToolpaths>false</ShowToolpaths>
+  <ShowCutWidths>true</ShowCutWidths>
   <ActiveLayer>Standard</ActiveLayer>
   <ActivePart>Teil1</ActivePart>
 </CADFile>

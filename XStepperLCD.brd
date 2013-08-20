@@ -2082,7 +2082,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="20.905" y="34.04" size="1.778" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="21.715" y="34.885" size="1.778" layer="27" ratio="10"/>
 </element>
-<element name="RN_A" library="resistor-net" package="RN-9" value="330" x="22.86" y="24.13" smashed="yes">
+<element name="RN_A" library="resistor-net" package="RN-9" value="680" x="22.86" y="24.13" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="22.86" y="24.13" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="22.86" y="24.13" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="22.86" y="24.13" size="1.778" layer="27" display="off"/>
@@ -2094,7 +2094,7 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="NAME" x="12.6" y="17.0546" size="0.9906" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="14.4356" y="17.0826" size="0.9906" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="RN_B" library="resistor-net" package="RN-9" value="330" x="22.86" y="35.56" smashed="yes">
+<element name="RN_B" library="resistor-net" package="RN-9" value="680" x="22.86" y="35.56" smashed="yes">
 <attribute name="OC_NEWARK" value="unknown" x="22.86" y="35.56" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="" x="22.86" y="35.56" size="1.778" layer="27" display="off"/>
 <attribute name="MF" value="" x="22.86" y="35.56" size="1.778" layer="27" display="off"/>
@@ -2809,9 +2809,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="9.5" y1="44.4" x2="9.525" y2="44.45" width="0.254" layer="16"/>
 </signal>
 </signals>
-<errors>
-<approved hash="3,1,0268421645590527"/>
-</errors>
 </board>
 </drawing>
 </eagle>
