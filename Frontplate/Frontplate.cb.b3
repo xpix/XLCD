@@ -34,55 +34,55 @@
             <p b="0.41421356237309503">-121,69,0</p>
           </pts>
         </rect>
-        <circle id="4" c="-143,80.5,0" d="7">
-          <ModificationCount>97</ModificationCount>
+        <circle id="4" c="-138,80.5,0" d="7">
+          <ModificationCount>108</ModificationCount>
           <Tag>Bohrung RotaryEncoder 7mm</Tag>
           <mat m="Identity" />
         </circle>
-        <circle id="6" c="-119.5,55,0" d="7.5">
-          <ModificationCount>151</ModificationCount>
+        <circle id="6" c="-119.5,45,0" d="7.5">
+          <ModificationCount>194</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="7" c="-119.5,18,0" d="7.5">
-          <ModificationCount>171</ModificationCount>
+        <circle id="7" c="-119.5,11,0" d="7.5">
+          <ModificationCount>189</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="8" c="-83,55,0" d="7.5">
-          <ModificationCount>231</ModificationCount>
+        <circle id="8" c="-83,45,0" d="7.5">
+          <ModificationCount>274</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="9" c="-136,35.5,0" d="7.5">
-          <ModificationCount>165</ModificationCount>
+        <circle id="9" c="-136,26.5,0" d="7.5">
+          <ModificationCount>198</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="10" c="-83,18,0" d="7.5">
-          <ModificationCount>166</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <circle id="11" c="-103,35.5,0" d="7.5">
-          <ModificationCount>114</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <text id="12" p1="-147,52,0" p2="6,2,0" Height="12" Font="Agency FB" align="bottom,left">
-          <ModificationCount>234</ModificationCount>
-          <mat m="Identity" />Move</text>
-        <text id="13" p1="-115,52,0" p2="4,0,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>149</ModificationCount>
-          <mat m="Identity" />Y+</text>
-        <text id="14" p1="-115,15,0" p2="5,0,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>154</ModificationCount>
-          <mat m="Identity" />Y-</text>
-        <text id="15" p1="-98,33,0" p2="19,1,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>172</ModificationCount>
-          <mat m="Identity" />X+</text>
-        <text id="16" p1="-146,33,0" p2="6,2,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>153</ModificationCount>
-          <mat m="Identity" />X-</text>
-        <text id="17" p1="-78,52,0" p2="22,0,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>191</ModificationCount>
-          <mat m="Identity" />Z+</text>
-        <text id="18" p1="-78,15,0" p2="22,1,0" Height="8" Font="Agency FB" align="bottom,left">
+        <circle id="10" c="-83,11,0" d="7.5">
           <ModificationCount>184</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <circle id="11" c="-103,26.5,0" d="7.5">
+          <ModificationCount>147</ModificationCount>
+          <mat m="Identity" />
+        </circle>
+        <text id="12" p1="-147,42,0" p2="6,-8,0" Height="12" Font="Agency FB" align="bottom,left">
+          <ModificationCount>277</ModificationCount>
+          <mat m="Identity" />Move</text>
+        <text id="13" p1="-115,42,0" p2="4,-10,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>192</ModificationCount>
+          <mat m="Identity" />Y+</text>
+        <text id="14" p1="-115,8,0" p2="5,-7,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>172</ModificationCount>
+          <mat m="Identity" />Y-</text>
+        <text id="15" p1="-98,24,0" p2="19,-8,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>205</ModificationCount>
+          <mat m="Identity" />X+</text>
+        <text id="16" p1="-146,24,0" p2="6,-7,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>186</ModificationCount>
+          <mat m="Identity" />X-</text>
+        <text id="17" p1="-78,42,0" p2="22,-10,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>234</ModificationCount>
+          <mat m="Identity" />Z+</text>
+        <text id="18" p1="-78,8,0" p2="22,-6,0" Height="8" Font="Agency FB" align="bottom,left">
+          <ModificationCount>202</ModificationCount>
           <mat m="Identity" />Z-</text>
         <text id="19" p1="-148,97,0" p2="-64,13,0" Height="12" Font="Agency FB" align="bottom,left">
           <ModificationCount>202</ModificationCount>
@@ -130,70 +130,60 @@
             <p b="0.41421356237309503">-57,6,0</p>
           </pts>
         </rect>
-        <circle id="23" c="-41,101,0" d="7.5">
-          <ModificationCount>140</ModificationCount>
+        <circle id="25" c="-20,100,0" d="7.5">
+          <ModificationCount>338</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="24" c="-21,101,0" d="7.5">
-          <ModificationCount>115</ModificationCount>
+        <circle id="26" c="-40,100,0" d="7.5">
+          <ModificationCount>343</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="25" c="-21,84,0" d="7.5">
-          <ModificationCount>147</ModificationCount>
+        <circle id="27" c="-20,60,0" d="7.5">
+          <ModificationCount>407</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="26" c="-41,84,0" d="7.5">
-          <ModificationCount>147</ModificationCount>
+        <circle id="28" c="-40,60,0" d="7.5">
+          <ModificationCount>412</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="27" c="-21,50,0" d="7.5">
-          <ModificationCount>206</ModificationCount>
+        <circle id="29" c="-40,80,0" d="7.5">
+          <ModificationCount>450</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="28" c="-41,50,0" d="7.5">
-          <ModificationCount>206</ModificationCount>
+        <circle id="30" c="-20,80,0" d="7.5">
+          <ModificationCount>445</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="29" c="-41,67,0" d="7.5">
-          <ModificationCount>195</ModificationCount>
+        <circle id="31" c="-20,20,0" d="7.5">
+          <ModificationCount>403</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="30" c="-21,67,0" d="7.5">
-          <ModificationCount>195</ModificationCount>
+        <circle id="32" c="-40,20,0" d="7.5">
+          <ModificationCount>426</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="31" c="-21,16,0" d="7.5">
-          <ModificationCount>210</ModificationCount>
+        <circle id="33" c="-40,40,0" d="7.5">
+          <ModificationCount>401</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="32" c="-41,16,0" d="7.5">
-          <ModificationCount>228</ModificationCount>
+        <circle id="34" c="-20,40,0" d="7.5">
+          <ModificationCount>396</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="33" c="-41,33,0" d="7.5">
-          <ModificationCount>201</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <circle id="34" c="-21,33,0" d="7.5">
-          <ModificationCount>201</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <text id="35" p1="-49,12,0" p2="70,-40,0" Height="8" Font="Agency FB" linespace="1.8" align="bottom,center">
-          <ModificationCount>285</ModificationCount>
+        <text id="35" p1="-48,16,0" p2="71,-36,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
+          <ModificationCount>494</ModificationCount>
           <mat m="Identity" />1
 2
 3
 4
-5
-6</text>
-        <text id="36" p1="-30,12,0" p2="89,-40,0" Height="8" Font="Agency FB" linespace="1.8" align="bottom,center">
-          <ModificationCount>97</ModificationCount>
+5</text>
+        <text id="36" p1="-29,16,0" p2="90,-36,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
+          <ModificationCount>306</ModificationCount>
           <mat m="Identity" />A
 B
 C
 D
-E
-F</text>
+E</text>
         <rect id="38" Closed="true" p="-121,94,0" w="61" h="18" radius="2">
           <ModificationCount>12</ModificationCount>
           <mat m="Identity" />
@@ -208,12 +198,12 @@ F</text>
             <p b="0.41421356237309503">-121,96,0</p>
           </pts>
         </rect>
-        <text id="40" p1="-90,28,0" p2="-7,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>146</ModificationCount>
+        <text id="40" p1="-90,19,0" p2="-7,-14,0" Height="24" Font="Wingdings 3" align="bottom,left">
+          <ModificationCount>179</ModificationCount>
           <mat m="Identity" />2</text>
         <text id="49" p1="-126,28,0" p2="-43,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>67</ModificationCount>
-          <mat m="6.12303176911189E-17 1 0 0 -1 6.12303176911189E-17 0 0 0 0 1 0 -83 155 0 1" />2</text>
+          <ModificationCount>97</ModificationCount>
+          <mat m="6.12303176911189E-17 1 0 0 -1 6.12303176911189E-17 0 0 0 0 1 0 -83 146 0 1" />2</text>
         <circle id="50" c="-154,109,0" d="5">
           <ModificationCount>23</ModificationCount>
           <mat m="Identity" />
@@ -230,27 +220,19 @@ F</text>
           <ModificationCount>40</ModificationCount>
           <mat m="Identity" />
         </circle>
-        <circle id="54" c="-110,107,0" d="7.5">
-          <ModificationCount>38</ModificationCount>
+        <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="17" Font="Agency FB" align="bottom,left">
+          <ModificationCount>28</ModificationCount>
+          <mat m="Identity" />XLCD 0.1</text>
+        <rect id="60" Closed="true" p="-133,50,0" w="87" h="60">
+          <ModificationCount>26</ModificationCount>
           <mat m="Identity" />
-        </circle>
-        <circle id="55" c="-70,107,0" d="7.5">
-          <ModificationCount>66</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <circle id="56" c="-90,107,0" d="7.5">
-          <ModificationCount>8</ModificationCount>
-          <mat m="Identity" />
-        </circle>
-        <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>23</ModificationCount>
-          <mat m="Identity" />Resume</text>
-        <text id="58" p1="-95,96,0" p2="1,0,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>24</ModificationCount>
-          <mat m="Identity" />Hold</text>
-        <text id="59" p1="-77,96,0" p2="-7,0,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>25</ModificationCount>
-          <mat m="Identity" />Reset</text>
+          <pts>
+            <p>-133,50,0</p>
+            <p>-46,50,0</p>
+            <p>-46,110,0</p>
+            <p>-133,110,0</p>
+          </pts>
+        </rect>
       </objects>
     </layer>
   </layers>
@@ -291,8 +273,6 @@ F</text>
           <SpindleRange state="Default">0</SpindleRange>
           <VelocityMode state="Default">Undefined</VelocityMode>
           <primitive>
-            <prim>23</prim>
-            <prim>24</prim>
             <prim>25</prim>
             <prim>26</prim>
             <prim>27</prim>
@@ -314,9 +294,6 @@ F</text>
             <prim>51</prim>
             <prim>52</prim>
             <prim>53</prim>
-            <prim>54</prim>
-            <prim>56</prim>
-            <prim>55</prim>
           </primitive>
           <TargetDepth state="Value">-4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
@@ -394,6 +371,112 @@ F</text>
           </HoldingTabs>
           <SideProfile state="Default" />
         </profile>
+        <profile>
+          <WorkPlane state="Default">XY</WorkPlane>
+          <OptimisationMode state="Default">Experimental</OptimisationMode>
+          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
+          <ToolDiameter state="Default">2</ToolDiameter>
+          <ToolNumber state="Value">2</ToolNumber>
+          <ToolProfile state="Default">EndMill</ToolProfile>
+          <PlungeFeedrate state="Default">300</PlungeFeedrate>
+          <CutFeedrate state="Default">800</CutFeedrate>
+          <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
+          <StartPoint state="Default" />
+          <CustomMOPHeader state="Default" />
+          <CustomMOPFooter state="Default" />
+          <Name>Ausfräsen</Name>
+          <StockSurface state="Default">0</StockSurface>
+          <RoughingClearance state="Default">0</RoughingClearance>
+          <ClearancePlane state="Default">3</ClearancePlane>
+          <SpindleDirection state="Default">CW</SpindleDirection>
+          <SpindleSpeed state="Default">1000</SpindleSpeed>
+          <SpindleRange state="Default">0</SpindleRange>
+          <VelocityMode state="Default">Undefined</VelocityMode>
+          <primitive>
+            <prim>1</prim>
+          </primitive>
+          <TargetDepth state="Value">-4</TargetDepth>
+          <DepthIncrement state="Default">0.4</DepthIncrement>
+          <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
+          <CutOrdering state="Default">DepthFirst</CutOrdering>
+          <CutWidth state="Default">0</CutWidth>
+          <StepOver state="Default">0.4</StepOver>
+          <StepoverFeedrate state="Default">Eintauch-Vorschub</StepoverFeedrate>
+          <InsideOutside state="Default">Outside</InsideOutside>
+          <MillingDirection state="Default">Conventional</MillingDirection>
+          <CollisionDetection state="Default">True</CollisionDetection>
+          <CornerOvercut state="Default">False</CornerOvercut>
+          <LeadInMove state="Default" />
+          <LeadOutMove state="Default" />
+          <HoldingTabs state="Value">
+            <TabMethod>Automatic</TabMethod>
+            <Width>3</Width>
+            <Height>3</Height>
+            <MinimumTabs>3</MinimumTabs>
+            <MaximumTabs>6</MaximumTabs>
+            <TabDistance>40</TabDistance>
+            <SizeThreshold>4</SizeThreshold>
+            <UseLeadIns>False</UseLeadIns>
+            <TabStyle>Triangle</TabStyle>
+          </HoldingTabs>
+          <Tabs>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.083333333333333329</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>-1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.25</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>-1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.41666666666666674</ParametricPoint>
+              <Normal>
+                <X>1</X>
+                <Y>-0</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.58333333333333337</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.75</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <NormalInverted>false</NormalInverted>
+              <ParentEntityID>1</ParentEntityID>
+              <ParametricPoint>0.91666666666666674</ParametricPoint>
+              <Normal>
+                <X>-1</X>
+                <Y>-0</Y>
+              </Normal>
+            </HoldingTab>
+          </Tabs>
+          <SideProfile state="Default" />
+        </profile>
         <engrave>
           <WorkPlane state="Default">XY</WorkPlane>
           <OptimisationMode state="Default">Experimental</OptimisationMode>
@@ -433,64 +516,12 @@ F</text>
             <prim>40</prim>
             <prim>49</prim>
             <prim>57</prim>
-            <prim>58</prim>
-            <prim>59</prim>
           </primitive>
           <TargetDepth state="Default">-0.4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>
         </engrave>
-        <profile>
-          <WorkPlane state="Default">XY</WorkPlane>
-          <OptimisationMode state="Default">Experimental</OptimisationMode>
-          <RoughingFinishing state="Default">Roughing</RoughingFinishing>
-          <ToolDiameter state="Default">2</ToolDiameter>
-          <ToolNumber state="Value">2</ToolNumber>
-          <ToolProfile state="Default">EndMill</ToolProfile>
-          <PlungeFeedrate state="Default">300</PlungeFeedrate>
-          <CutFeedrate state="Default">800</CutFeedrate>
-          <MaxCrossoverDistance state="Default">0.7</MaxCrossoverDistance>
-          <StartPoint state="Default" />
-          <CustomMOPHeader state="Default" />
-          <CustomMOPFooter state="Default" />
-          <Name>Ausfräsen</Name>
-          <StockSurface state="Default">0</StockSurface>
-          <RoughingClearance state="Default">0</RoughingClearance>
-          <ClearancePlane state="Default">3</ClearancePlane>
-          <SpindleDirection state="Default">CW</SpindleDirection>
-          <SpindleSpeed state="Default">1000</SpindleSpeed>
-          <SpindleRange state="Default">0</SpindleRange>
-          <VelocityMode state="Default">Undefined</VelocityMode>
-          <primitive>
-            <prim>1</prim>
-          </primitive>
-          <TargetDepth state="Value">-4</TargetDepth>
-          <DepthIncrement state="Default">0.4</DepthIncrement>
-          <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
-          <CutOrdering state="Default">DepthFirst</CutOrdering>
-          <CutWidth state="Default">0</CutWidth>
-          <StepOver state="Default">0.4</StepOver>
-          <StepoverFeedrate state="Default">Eintauch-Vorschub</StepoverFeedrate>
-          <InsideOutside state="Default">Outside</InsideOutside>
-          <MillingDirection state="Default">Conventional</MillingDirection>
-          <CollisionDetection state="Default">True</CollisionDetection>
-          <CornerOvercut state="Default">False</CornerOvercut>
-          <LeadInMove state="Default" />
-          <LeadOutMove state="Default" />
-          <HoldingTabs state="Default">
-            <TabMethod>None</TabMethod>
-            <Width>3</Width>
-            <Height>3</Height>
-            <MinimumTabs>3</MinimumTabs>
-            <MaximumTabs>6</MaximumTabs>
-            <TabDistance>40</TabDistance>
-            <SizeThreshold>4</SizeThreshold>
-            <UseLeadIns>False</UseLeadIns>
-            <TabStyle>Triangle</TabStyle>
-          </HoldingTabs>
-          <SideProfile state="Default" />
-        </profile>
       </machineops>
       <Stock>
         <PMin>0,0</PMin>

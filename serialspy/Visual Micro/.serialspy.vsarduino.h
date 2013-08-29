@@ -1,5 +1,6 @@
-//Board = Arduino Duemilanove w/ ATmega328
+//Board = Arduino Uno
 #define __AVR_ATmega328P__
+#define _VMDEBUG 1
 #define ARDUINO 105
 #define F_CPU 16000000L
 #define __AVR__
@@ -11,11 +12,6 @@ String getValue(String data, char separator, int index);
 void parsePCCommand(String line);
 void parseGrblLine(String line);
 byte ReadButton();
-void parse_command_line(String line);
-void setinterval(String line);
-void resetDevice();
-void memoryfree();
-void about();
 void call_button(byte number);
 void call_button_1();
 void call_button_2();
@@ -36,18 +32,36 @@ void call_button_16();
 void call_button_17();
 void call_button_18();
 void call_button_19();
+void parse_command_line(String line);
+void learn_button();
+void press_button(String line);
+void setinterval(String line);
+void resetDevice();
+void memoryfree();
+void about();
+void menu_display(int offset);
+void menu_select(int select);
+void menu_about(void);
+void menu_exit(void);
+void menu_1(void);
+void menu_2(void);
 void parse_status_line(String line);
 void parse_state_line(String myBuffer);
+int get_set_button_power(int button, int intvalue);
+void simpleThread_setup(drawMenu);
+boolean simpleThread_loop(drawMenu);
 void simpleThread_setup(getPositions);
 boolean simpleThread_loop(getPositions);
 void simpleThread_setup(getStates);
 boolean simpleThread_loop(getStates);
 
-#include "C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard\pins_arduino.h" 
-#include "C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino\arduino.h"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\serialspy.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\buttons_thread.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\commands.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\config_buttons.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\lcd_screens.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\timebased_threads.ino"
+#include "C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard\pins_arduino.h" 
+#include "C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino\arduino.h"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\serialspy.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\buttons_thread.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\config_buttons.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\console.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\lcd_menu.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\lcd_screens.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\persistance.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\timebased_threads.ino"

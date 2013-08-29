@@ -9,6 +9,22 @@
 
 /* 
  ************************************* 
+ * Thread to draw lcd menu
+ * call menu.draw()
+ ************************************* 
+ */
+  void simpleThread_setup(drawMenu)
+  {
+    // output
+  }  
+
+  boolean simpleThread_loop(drawMenu)
+  {
+      return false;    
+  }
+
+/* 
+ ************************************* 
  * Thread to send a '?' to 
  * get GRBL position informations
  ************************************* 
@@ -22,6 +38,10 @@
   {
     // output counter value
     grblSerial.print('?');
+
+   Serial.print("freeMemory()=");
+   Serial.println(freeMemory());
+
     
     return false;    
   }

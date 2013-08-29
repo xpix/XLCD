@@ -12,13 +12,14 @@
     <OutputFileName>$(MSBuildProjectName)</OutputFileName>
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
-    <AssemblyName>serialspy</AssemblyName>
-    <Name>serialspy</Name>
-    <RootNamespace>serialspy</RootNamespace>
+    <AssemblyName>xlcd_menu_ino</AssemblyName>
+    <Name>xlcd_menu_ino</Name>
+    <RootNamespace>xlcd_menu_ino</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
     <OverrideVtor>false</OverrideVtor>
-    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <OverrideVtorValue>
+    </OverrideVtorValue>
     <eraseonlaunchrule>0</eraseonlaunchrule>
     <ProgFlashFromRam>true</ProgFlashFromRam>
     <RamSnippetAddress>0x20000000</RamSnippetAddress>
@@ -37,20 +38,6 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
-    <com_atmel_avrdbg_tool_simulator>
-      <ToolOptions xmlns="">
-        <InterfaceProperties>
-          <JtagEnableExtResetOnStartSession>false</JtagEnableExtResetOnStartSession>
-        </InterfaceProperties>
-        <InterfaceName>
-        </InterfaceName>
-      </ToolOptions>
-      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
-      <ToolNumber xmlns="">
-      </ToolNumber>
-      <ToolName xmlns="">Simulator</ToolName>
-    </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -64,7 +51,6 @@
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
-            <Value>_VMDEBUG=1</Value>
             <Value>ARDUINO=105</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
@@ -233,7 +219,6 @@
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
-            <Value>_VMDEBUG=1</Value>
             <Value>ARDUINO=105</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
@@ -403,43 +388,6 @@
         <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
       </AvrGccCpp>
     </ToolchainSettings>
-    <VisualMicroSettings>
-      <VisualMicroSettings>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
-upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
-bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
-bootloader.unlock_bits=0x3F
-bootloader.lock_bits=0x0F
-build.mcu=atmega328p
-build.f_cpu=16000000L
-build.core=arduino
-build.variant=standard
-runtime.ide.path=C:\Users\xpix\Dropbox\arduino-1.0.5
-build.system.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\system
-software=ARDUINO
-runtime.ide.version=105
-vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino
-vm.boardsource.name=boards.txt
-vm.platformname.name=
-</arduino.board.property_bag>
-        <arduino.build.mcu>atmega328p</arduino.build.mcu>
-        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
-        <arduino.build.core>arduino</arduino.build.core>
-        <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
-        <arduino.upload.port>COM23</arduino.upload.port>
-      </VisualMicroSettings>
-    </VisualMicroSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
@@ -453,7 +401,6 @@ vm.platformname.name=
         <avrgcc.compiler.symbols.DefSymbols>
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
-            <Value>_VMDEBUG=1</Value>
             <Value>ARDUINO=105</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
@@ -622,7 +569,6 @@ vm.platformname.name=
         <avrgcccpp.compiler.symbols.DefSymbols>
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
-            <Value>_VMDEBUG=1</Value>
             <Value>ARDUINO=105</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
@@ -792,78 +738,19 @@ vm.platformname.name=
         <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
       </AvrGccCpp>
     </ToolchainSettings>
-    <VisualMicroSettings>
-      <VisualMicroSettings>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
-upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
-bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
-bootloader.unlock_bits=0x3F
-bootloader.lock_bits=0x0F
-build.mcu=atmega328p
-build.f_cpu=16000000L
-build.core=arduino
-build.variant=standard
-runtime.ide.path=C:\Users\xpix\Dropbox\arduino-1.0.5
-build.system.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\system
-software=ARDUINO
-runtime.ide.version=105
-vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino
-vm.boardsource.name=boards.txt
-vm.platformname.name=
-</arduino.board.property_bag>
-        <arduino.build.mcu>atmega328p</arduino.build.mcu>
-        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
-        <arduino.build.core>arduino</arduino.build.core>
-        <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
-        <arduino.upload.port>COM23</arduino.upload.port>
-      </VisualMicroSettings>
-    </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EEPROMAnything.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Visual Micro\.serialspy.vsarduino.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <None Include="buttons_thread.ino">
-      <SubType>compile</SubType>
-    </None>
-    <Compile Include="console.ino">
-      <SubType>compile</SubType>
-    </Compile>
-    <None Include="config_buttons.ino">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="lcd_menu.ino">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="lcd_screens.ino">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="persistance.ino">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="serialspy.ino">
-      <SubType>compile</SubType>
-    </None>
-    <None Include="timebased_threads.ino">
+    <None Include="xlcd_menu_ino.ino">
       <SubType>compile</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Visual Micro\.xlcd_menu_ino.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

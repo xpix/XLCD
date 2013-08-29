@@ -26,8 +26,8 @@ byte ReadButton()
    unsigned int buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
    if(buttonVoltage <= 1000 + BUTTONHYSTERESIS){
 	   // test all values to discover button
-	   for (int i = 8; i > 0 ; i--) {
-		  if( buttonVoltage < ( button_power[i] - BUTTONHYSTERESIS ) )
+	   for (int i = BUTTONS_CNT; i >= 0 ; i--) {
+		  if( buttonVoltage < ( get_set_button_power(i,0) - BUTTONHYSTERESIS ) )
 		  {
 			 button = i;
 		  }
