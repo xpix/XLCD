@@ -13,11 +13,15 @@
  * =============================================== 
  */
 #include <simpleThread.h>
-#include <AltSoftSerial.h>
-#include <LCD.h>
+//#include <AltSoftSerial.h>
+#include <SoftwareSerial.h>
 #include <MemoryFree.h>
+#include <EEPROMEx.h>
 #include <phi_interfaces.h>
-//#include <SoftwareSerial.h>
+
+// local libs
+#include "LCDMenu.h"
+
 
 /* Prototype on Arduino UNO or compatible
  * Frank (xpix) Herrmann / 07/2013
@@ -30,18 +34,21 @@
  * =============================================== 
  */
 
+// Makros
+#define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
+
 // XXX: 
 // Test with SoftwareSerial, because AltSerial need Ports 8 and 9. 
 // PCB Design use follow Connects
 //    PC => ( Soft: 9,10 ) => XLCD => (UART: 0,1) => XStepper
 
 // GRBL Serial connect pins
-// SoftwareSerial
-// #define GRBL_RX     9
-// #define GRBL_TX     10 
+// SoftwareSerial (NewSoftSerial)
+#define GRBL_RX     9
+#define GRBL_TX     10 
 // AltSoftSerial
-#define GRBL_RX        8
-#define GRBL_TX        9 
+//#define GRBL_RX        8
+//#define GRBL_TX        9 
 
 // LCD
 //#define LCD_ADDR        0x27  // I2C LCD Address
@@ -52,33 +59,33 @@
 // Rotary Encoder
 #define ENC_A           2   // Encoder interrupt pin
 #define ENC_B           A3  // Encoder second pin
-#define ENC_S           A4  // Encoder select pin
+#define ENC_S           A2  // Encoder select pin
 
 // Buttons
 #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
 #define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
-#define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
-#define BUTTON_NONE        0     // no pressed state
 
 // Measure Power on when pressed button and note this value here
 // use resistor network 680 Ohm
 // Buttons:            0   1   2    3    4    5    6    7
 int button_power[] = {30, 262, 415, 517, 589, 643, 685, 718}; // Power data for every pressed button
-byte buttonJustPressed  = false;         //this will be true after a ReadButtons() call if triggered
-byte buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
-byte buttonWas          = BUTTON_NONE;   //used by ReadButtons() for detection of button events   
 
-String LINE;
-String CMDLINE;
-char GRBL_FIRST_CHAR;
-char PC_FIRST_CHAR;
+String			LINE;
+String			CMDLINE;
+char				GRBL_FIRST_CHAR;
+char				PC_FIRST_CHAR;
+volatile char	rotary_key;   // flag, follow button press
+volatile byte  button_pressed;
+boolean        proxymode = true;
+
 
 /* 
  * ===============================================
  * Inits
  * =============================================== 
  */
-//SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
+// AltSoftSerial grblSerial;
+SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
 
 // Add Threads to refresh status informations from GRBL
 #define _sT_cnt  _sT_cnt_2    // count of threads(?, $G)
@@ -88,14 +95,28 @@ simpleThread_init(_sT_cnt);   // init threads
 simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis,  500, _sT_start , getPositions);	// get position info (?)
 simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 2000, _sT_start , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
 
-AltSoftSerial grblSerial;
 
 // Rotary Encoder
 #if defined(ENC_A)
 	// Rotary Encoder
 	char mapping1[]={'R','L'}; // This is a rotary encoder so it returns U for up and D for down on the dial.
-	phi_rotary_encoders myEncoder(mapping1, ENC_A, ENC_B, ENC_S);
-	multiple_button_input* dial=&myEncoder;
+	phi_rotary_encoders myEncoder(mapping1, ENC_A, ENC_B, 12);
+
+	char mapping[]={'S'}; // This is a list of names for each button.
+	byte pins[]={ENC_S}; // The digital pins connected to the 6 buttons.
+	phi_button_groups myEncoderButton(mapping, pins, 1);
+#endif
+
+// Analog Buttons
+#if defined(BUTTONS_A_ADC_PIN)
+	byte keypad_type=Analog_keypad;
+	char key_mapping_analog_a[]={'1','2','3','4','5','6','7'}; // This is an analog keypad A.
+	byte pins_a[]={BUTTONS_A_ADC_PIN};
+	phi_analog_keypads pad_a(key_mapping_analog_a, pins_a, button_power, 1, 7);
+
+	char key_mapping_analog_b[]={'A','B','C','D','E','F','G'}; // This is an analog keypad B.
+	byte pins_b[]={BUTTONS_B_ADC_PIN};
+	phi_analog_keypads pad_b(key_mapping_analog_b, pins_b, button_power, 1, 7);
 #endif
 
 // All inits for LCD control
@@ -109,6 +130,13 @@ AltSoftSerial grblSerial;
    //                         addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
    LiquidCrystal_I2C myLCD(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 #endif
+
+// LCD Menu
+// look in lcd_menu.ino for build menus
+LCDMenu menu(&myLCD, LCD_cols, LCD_rows);
+
+
+
 
 
 /* 
@@ -130,6 +158,8 @@ void setup()
    myLCD.print(F("XLCD 0.1"));
    myLCD.setCursor(0,1); // letter, row
    myLCD.print(F("Connect ... "));
+
+	menu_root(0); // init root menu but don't display
 
    // This is the serial connect to PC, we get some commands
    // but we can also print some additional information about this module
@@ -158,16 +188,29 @@ void loop()
 	simpleThread_run(_sT_priority);
 
    // Read key from Rotary Encoder
-   char temp=dial->getKey(); // Use the phi_interfaces to access the same keypad
-   if (temp!=NO_KEY) {
-		Serial.println(temp);
+	rotary_key = myEncoder.getKey();
+	if(rotary_key == NO_KEY){
+		rotary_key = myEncoderButton.getKey();
+	}
+	switch(rotary_key){
+		case 'R':
+			menu.up();
+		break;
+		case 'L':
+			menu.down();
+		break;
+		case 'S':
+			menu.mselect();
 	}
 
    // try to read a button
-   byte button = ReadButton();
-   if(button && buttonJustPressed){
-      call_button(button);
-   }
+	button_pressed=pad_a.getKey(); // Use phi_keypads object to access the keypad
+	if (button_pressed == NO_KEY){
+		button_pressed = pad_b.getKey(); // Use phi_keypads object to access the keypad
+	}
+	if(button_pressed != NO_KEY)
+		call_button(button_pressed);
+   
 
   // Get data from GRBL ==> PC
   if (grblSerial.available()) {

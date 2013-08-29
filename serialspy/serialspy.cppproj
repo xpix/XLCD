@@ -79,6 +79,10 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
@@ -89,6 +93,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
@@ -113,14 +119,12 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
@@ -131,6 +135,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
@@ -139,6 +145,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
@@ -241,6 +249,10 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
@@ -251,6 +263,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
@@ -275,14 +289,12 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
@@ -293,6 +305,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
@@ -301,6 +315,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
@@ -454,6 +470,10 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
@@ -464,6 +484,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
@@ -488,14 +510,12 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
@@ -506,6 +526,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
@@ -514,6 +536,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
@@ -616,6 +640,10 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
@@ -626,6 +654,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
@@ -650,14 +680,12 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib\utility</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C</Value>
-            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LCDMenuLib_I2C\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
@@ -668,6 +696,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
@@ -676,6 +706,8 @@ vm.platformname.name=
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
@@ -810,6 +842,9 @@ vm.platformname.name=
       <SubType>compile</SubType>
     </None>
     <None Include="config_buttons.ino">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="lcd_menu.ino">
       <SubType>compile</SubType>
     </None>
     <None Include="lcd_screens.ino">
