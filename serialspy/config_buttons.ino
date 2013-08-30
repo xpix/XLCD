@@ -17,17 +17,14 @@ void call_button(byte number){
       case 5: call_button_5(); break;
       case 6: call_button_6(); break;
       case 7: call_button_7(); break;
-      case 8: call_button_8(); break;
-      case 9: call_button_9(); break;
-      case 10: call_button_10(); break;
-      case 12: call_button_12(); break;
-      case 13: call_button_13(); break;
-      case 14: call_button_14(); break;
-      case 15: call_button_15(); break;
-      case 16: call_button_16(); break;
-      case 17: call_button_17(); break;
-      case 18: call_button_18(); break;
-      case 19: call_button_19(); break;
+
+      case 'A': call_button_A(); break;
+      case 'B': call_button_B(); break;
+      case 'C': call_button_C(); break;
+      case 'D': call_button_D(); break;
+      case 'E': call_button_E(); break;
+      case 'F': call_button_F(); break;
+      case 'G': call_button_G(); break;
    }
 }
 
@@ -56,17 +53,12 @@ void call_button_4(){ };
 void call_button_5(){ };
 void call_button_6(){ };
 void call_button_7(){ };
-void call_button_8(){ };
-void call_button_9(){ };
 
 // Second Button row
-void call_button_10(){ };
-void call_button_11(){ };
-void call_button_12(){ };
-void call_button_13(){ };
-void call_button_14(){ };
-void call_button_15(){ };
-void call_button_16(){ };
-void call_button_17(){ };
-void call_button_18(){ };
-void call_button_19(){ };
+void call_button_A(){ };
+void call_button_B(){ };
+void call_button_C(){ };
+void call_button_D(){ };
+void call_button_E(){ };
+void call_button_F(){ };
+void call_button_G(){ };

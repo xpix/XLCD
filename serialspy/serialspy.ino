@@ -14,12 +14,13 @@
  */
 #include <EEPROMEx.h>
 #include <simpleThread.h>
-#include <AltSoftSerial.h>
+//#include <AltSoftSerial.h>
+#include <SoftwareSerial.h>
 #include <MemoryFree.h>
 #include <phi_interfaces.h>
 
-
-//#include <SoftwareSerial.h>
+// local libs
+#include "LCDMenu.h"
 
 /* Prototype on Arduino UNO or compatible
  * Frank (xpix) Herrmann / 07/2013
@@ -32,95 +33,68 @@
  * =============================================== 
  */
 
+// Makros
+#define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
+
 // XXX: 
 // Test with SoftwareSerial, because AltSerial need Ports 8 and 9. 
 // PCB Design use follow Connects
 //    PC => ( Soft: 9,10 ) => XLCD => (UART: 0,1) => XStepper
 
-// GRBL Serial connect pins
+// GRBL Serial connect pins ----------------------
 // SoftwareSerial
-#define GRBL_RX         9
-#define GRBL_TX         10 
+#define GRBL_RX			9
+#define GRBL_TX			10 
 
 // AltSoftSerial
-#define GRBL_RX         8
-#define GRBL_TX         9 
+//#define GRBL_RX			8
+//#define GRBL_TX			9 
 
-// LCD
-//#define LCD_ADDR        0x27  // I2C LCD Address
+// LCD -------------------------------------------
+//#define LCD_ADDR		0x27  // I2C LCD Address
 #define LCD_4BIT
-#define LCD_cols                          16
-#define LCD_rows                          4
+#define LCD_cols			16
+#define LCD_rows			4
 
 
-// Rotary Encoder
+// Rotary Encoder --------------------------------
 #define ENC_A           2   // Encoder interrupt pin
 #define ENC_B           A3  // Encoder second pin
-#define ENC_S           3  // Encoder select pin
-volatile char rotary_key;   // flag, follow button press
+#define ENC_S           A2  // Encoder select pin
 
-// Buttons
+// Buttons ---------------------------------------
 #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
 #define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
-#define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
-#define BUTTON_NONE        0     // no pressed state
-#define BUTTONS_CNT        7     // how much buttons on one pin
 
 // Measure Power on when pressed button and note this value here
 // use resistor network 680 Ohm
-byte buttonJustPressed  = false;         //this will be true after a ReadButtons() call if triggered
-byte buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
-byte buttonWas          = BUTTON_NONE;   //used by ReadButtons() for detection of button events   
+// Buttons:            0   1   2    3    4    5    6    7
+int button_power[] = {30, 262, 415, 517, 589, 643, 685, 718}; // Power data for every pressed button
 
-// Parser
-String LINE;
-String CMDLINE;
-char GRBL_FIRST_CHAR;
-char PC_FIRST_CHAR;
 
-// LCD Menu --------------
-// symbol to describe selected point
-const char LCD_select_char = '>';
-int LCD_offset =	-1;
-int LCD_select =	0;
-struct menuitem
-{
-	char name[28];
-	void (*callback)(void);
-};
-// maximum entrys (10)
-struct menuitem items[10];
-// count entrys
-int menucounter = 0;
-
-// add menu entry [menutext, callback]
-void menu_add_item(const char* text, void (*menu_callback)(void))
-{
-	int i = menucounter++;
-	struct menuitem *item = &items[i];
-	strncpy(item->name, text, sizeof(item->name));
-	if(menu_callback)
-	item->callback = menu_callback;
-}
-
+// glob Vars  ------------------------------------
+String			LINE;
+String			CMDLINE;
+char				GRBL_FIRST_CHAR;
+char				PC_FIRST_CHAR;
+volatile char	rotary_key;   // flag, follow button press
+volatile byte  button_pressed;
+boolean        proxymode = true;
 
 /* 
  * ===============================================
  * Inits
  * =============================================== 
  */
-//SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
-
-// Intialize menu tree
+SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
+//AltSoftSerial grblSerial;
 
 // Add Threads to refresh status informations from GRBL
-#define _sT_cnt  _sT_cnt_3    // count of threads(?, $G)
+#define _sT_cnt  _sT_cnt_2    // count of threads(?, $G)
 simpleThread_init(_sT_cnt);   // init threads
-simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis,  200, _sT_start , drawMenu);	// draw lcd menu
-simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis,  500, _sT_start , getPositions);	// get position info (?)
-simpleThread_new_timebased_dynamic  (_sT_P3  , _sT_millis, 2000, _sT_start , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
+simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis,  500, _sT_start , getPositions);	// get position info (?)
+simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 2000, _sT_start , getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
 
-AltSoftSerial grblSerial;
 
 // Rotary Encoder
 #if defined(ENC_A)
@@ -132,6 +106,21 @@ AltSoftSerial grblSerial;
    byte pins[]={ENC_S}; // The digital pins connected to the 6 buttons.
    phi_button_groups myEncoderButton(mapping, pins, 1);
 #endif
+
+// Analog Buttons
+#if defined(BUTTONS_A_ADC_PIN)
+	byte keypad_type=Analog_keypad;
+	char key_mapping_analog_a[]={'1','2','3','4','5','6','7'}; // This is an analog keypad A.
+	byte pins_a[]={BUTTONS_A_ADC_PIN};
+	phi_analog_keypads pad_a(key_mapping_analog_a, pins_a, button_power, 1, 7);
+
+	char key_mapping_analog_b[]={'A','B','C','D','E','F','G'}; // This is an analog keypad B.
+	byte pins_b[]={BUTTONS_B_ADC_PIN};
+	phi_analog_keypads pad_b(key_mapping_analog_b, pins_b, button_power, 1, 7);
+#endif
+
+
+
 
 // All inits for LCD control
 #if defined(LCD_4BIT)
@@ -145,6 +134,9 @@ AltSoftSerial grblSerial;
    LiquidCrystal_I2C myLCD(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 #endif
 
+// LCD Menu
+// look in lcd_menu.ino for build menus
+LCDMenu menu(&myLCD, LCD_cols, LCD_rows);
 
 /* 
  * ===============================================
@@ -163,14 +155,6 @@ void setup()
 
    myLCD.begin(LCD_cols, LCD_rows);
 
-	// Add entrys to LCD Menu
-   menu_add_item("1. menuentry", menu_1);
-   menu_add_item("2. menuentry", menu_2);
-   menu_add_item("3. menuentry", menu_1);
-   menu_add_item("4. menuentry", menu_2);
-   menu_add_item("About",			menu_about);
-   menu_add_item("Exit",         menu_exit);
-
    // This is the serial connect to PC, we get some commands
    // but we can also print some additional information about this module
    // and the parser from Client program will ignore this
@@ -180,7 +164,7 @@ void setup()
    Serial.println(F("<Call help with ':?'>"));
 
    // Old LCD Screens
-   myLCD.begin(16,4); // letter, row
+   myLCD.begin(LCD_cols,LCD_rows); // letter, row
 
    myLCD.setCursor(0,0); // letter, row
    myLCD.print(F("XLCD 0.1"));
@@ -210,23 +194,21 @@ void loop()
 	}
 	switch(rotary_key){
 		case 'R':
-			LCD_select++;
-			menu_display(LCD_offset++); // one down
 			break;
 		case 'L':
-			LCD_select--;
-			menu_display(LCD_offset--); // one down
 			break;
 		case 'S':
-			menu_select(LCD_select);
 			break;
 	}
 
-   // try to read a button
-   byte button = ReadButton();
-   if(button && buttonJustPressed){
-      call_button(button);
-   }
+	// try to read a analog button
+	button_pressed=pad_a.getKey(); // Use phi_keypads object to access the keypad
+	if (button_pressed == NO_KEY){
+		 button_pressed = pad_b.getKey(); // Use phi_keypads object to access the keypad
+	}
+	if(button_pressed != NO_KEY)
+		call_button(button_pressed);
+
 
   // Get data from GRBL ==> PC
   if (grblSerial.available()) {

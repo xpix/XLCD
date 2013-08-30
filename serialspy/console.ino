@@ -26,7 +26,7 @@ void parse_command_line(String line)
    if( line.indexOf('l') == 1 ) return learn_button();
    if( line.indexOf('b') == 1 ) return press_button(line);
    if( line.indexOf('i') == 1 ) return setinterval(line);
-   if( line.indexOf('r') == 1 ) return resetDevice();
+   if( line.indexOf('r') == 1 ) return resetDevice(0);
    if( line.indexOf('m') == 1 ) return memoryfree();
    if( line.indexOf('v') == 1 ) return about();
    Serial.println("Cant parse this command: " + line);
@@ -34,7 +34,7 @@ void parse_command_line(String line)
 
 void learn_button(){
    Serial.println(F("learn buttons ... "));
-   for (int i = 0; i <= BUTTONS_CNT; i++)
+	for (int i = 0; i <= COUNT_OF(button_power); i++)
    {
       Serial.print(F("Please push button: "));
       Serial.print(i);
@@ -83,7 +83,7 @@ void setinterval(String line){
    Serial.println(F(">"));
 }
 
-void resetDevice(){
+void resetDevice(int n){
    Serial.println(F("Reset device ... "));
    delay(100);
    asm volatile ("jmp 0x0000");

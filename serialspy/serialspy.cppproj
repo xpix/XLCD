@@ -72,154 +72,156 @@
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -241,154 +243,156 @@
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>
@@ -405,39 +409,48 @@
     </ToolchainSettings>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
+        <arduino.board.name>atmega328p</arduino.board.name>
+        <arduino.board.desc>Arduino Duemilanove w/ ATmega328P</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Duemilanove w/ ATmega328P
 upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
+upload.maximum_size=30720
+upload.speed=57600
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDA
 bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
+bootloader.path=atmega
+bootloader.file=ATmegaBOOT_168_atmega328.hex
 bootloader.unlock_bits=0x3F
 bootloader.lock_bits=0x0F
 build.mcu=atmega328p
 build.f_cpu=16000000L
 build.core=arduino
 build.variant=standard
-runtime.ide.path=C:\Users\xpix\Dropbox\arduino-1.0.5
-build.system.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\system
+runtime.ide.path=C:\Users\c5125630\Dropbox\arduino-1.0.5
+build.system.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\system
 software=ARDUINO
 runtime.ide.version=105
 vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino
+vm.boardsource.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino
 vm.boardsource.name=boards.txt
 vm.platformname.name=
+compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
+includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire" 
+build.path=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p
+build.project_name=serialspy
+build.variant.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard
+archive_file=core.a
+object_file="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o"
+source_file="C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c"
+object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROMEx\EEPROMEx.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\AltSoftSerial\AltSoftSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\phi_interfaces\phi_interfaces.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
         <arduino.build.core>arduino</arduino.build.core>
         <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
-        <arduino.upload.port>COM23</arduino.upload.port>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
+        <arduino.upload.port>COM5</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -461,154 +474,156 @@ vm.platformname.name=
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
           </ListValues>
         </avrgcc.compiler.directories.IncludePaths>
         <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -630,154 +645,156 @@ vm.platformname.name=
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
           <ListValues>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee</Value>
-            <Value>C:\Users\xpix\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
-            <Value>c:\users\xpix\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AccelStepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Bounce\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Button\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Buttons\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\CapacitiveSensor\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DmxSimple\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DogLcd\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\DS1307RTC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Entropy\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Esplora\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ethernet\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqMeasure\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FrequencyTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\GSM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\IRremote\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\jeelib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Keypad\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ks0108\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedControl\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LedDisplay\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystalFast\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LowPower\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\M2tklib\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MENWIZ\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Metro\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MIDI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Morse\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MsTimer2\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\NewSoftSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OctoWS2811\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OneWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\OSC\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_prompt\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Ping\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PS2Keyboard\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\PWMServo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SD\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Servo\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ShiftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftPWM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SPI\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\ST7565\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Stepper\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Time\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimeAlarms\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Timer\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerOne\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TimerThree\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyGPS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireM\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\TinyWireS\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Tlc5940\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\UTFT\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\VirtualWire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\WiFi\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\x10\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\XBee\utility</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\include\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\avr\</Value>
+            <Value>c:\users\c5125630\dropbox\arduino-1.0.5\hardware\tools\avr\lib\gcc\avr\4.3.2\include\</Value>
             <Value>
             </Value>
           </ListValues>
@@ -794,44 +811,56 @@ vm.platformname.name=
     </ToolchainSettings>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
+        <arduino.board.name>atmega328p</arduino.board.name>
+        <arduino.board.desc>Arduino Duemilanove w/ ATmega328P</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Duemilanove w/ ATmega328P
 upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
+upload.maximum_size=30720
+upload.speed=57600
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDA
 bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
+bootloader.path=atmega
+bootloader.file=ATmegaBOOT_168_atmega328.hex
 bootloader.unlock_bits=0x3F
 bootloader.lock_bits=0x0F
 build.mcu=atmega328p
 build.f_cpu=16000000L
 build.core=arduino
 build.variant=standard
-runtime.ide.path=C:\Users\xpix\Dropbox\arduino-1.0.5
-build.system.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\system
+runtime.ide.path=C:\Users\c5125630\Dropbox\arduino-1.0.5
+build.system.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\system
 software=ARDUINO
 runtime.ide.version=105
 vm.core.include=arduino.h
-vm.boardsource.path=C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino
+vm.boardsource.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino
 vm.boardsource.name=boards.txt
 vm.platformname.name=
+compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
+includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire" 
+build.path=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p
+build.project_name=serialspy
+build.variant.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard
+archive_file=core.a
+object_file="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o"
+source_file="C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c"
+object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROMEx\EEPROMEx.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\AltSoftSerial\AltSoftSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\phi_interfaces\phi_interfaces.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
         <arduino.build.core>arduino</arduino.build.core>
         <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
-        <arduino.upload.port>COM23</arduino.upload.port>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
+        <arduino.upload.port>COM5</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="EEPROMAnything.h">
+    <Compile Include="LCDMenu.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LCDMenu.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Visual Micro\.serialspy.vsarduino.h">
