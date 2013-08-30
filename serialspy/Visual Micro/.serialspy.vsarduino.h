@@ -1,4 +1,4 @@
-//Board = Arduino Duemilanove w/ ATmega328
+//Board = Arduino Duemilanove w/ ATmega328P
 #define __AVR_ATmega328P__
 #define ARDUINO 105
 #define F_CPU 16000000L
@@ -48,14 +48,14 @@ boolean simpleThread_loop(getPositions);
 void simpleThread_setup(getStates);
 boolean simpleThread_loop(getStates);
 
-#include "C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard\pins_arduino.h" 
-#include "C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino\arduino.h"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\serialspy.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\LCDMenu.cpp"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\LCDMenu.h"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\commands.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\config_buttons.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\lcd_menu.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\lcd_screens.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\persistance.ino"
-#include "C:\Users\c5125630\Dropbox\GitHub\XStepperLCD\serialspy\timebased_threads.ino"
+#include "C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard\pins_arduino.h" 
+#include "C:\Users\xpix\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino\arduino.h"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\serialspy.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\LCDMenu.cpp"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\LCDMenu.h"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\commands.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\config_buttons.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\lcd_menu.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\lcd_screens.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\persistance.ino"
+#include "C:\Users\xpix\Dropbox\GitHub\XStepperLCD\serialspy\timebased_threads.ino"

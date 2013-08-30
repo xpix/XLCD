@@ -13,8 +13,8 @@
  * =============================================== 
  */
 #include <simpleThread.h>
-//#include <AltSoftSerial.h>
-#include <SoftwareSerial.h>
+#include <AltSoftSerial.h>
+//#include <SoftwareSerial.h>
 #include <MemoryFree.h>
 #include <EEPROMEx.h>
 #include <phi_interfaces.h>
@@ -84,8 +84,8 @@ boolean        proxymode = true;
  * Inits
  * =============================================== 
  */
-// AltSoftSerial grblSerial;
-SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
+AltSoftSerial grblSerial;
+//SoftwareSerial grblSerial(GRBL_RX, GRBL_TX); // RX, TX
 
 // Add Threads to refresh status informations from GRBL
 #define _sT_cnt  _sT_cnt_2    // count of threads(?, $G)
