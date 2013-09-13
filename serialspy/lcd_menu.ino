@@ -27,12 +27,11 @@ void menu_root(int disp){
 	menu.onchange(menu_onchange);
 
 	// LCD size:  |----------------|---|
-	menu.add_item("Set serial mode",   menu_mode,      0);
-	menu.add_item("Set data interval", menu_interval,  0);
-	menu.add_item("Learn buttons",     menu_learn,     0);
-	menu.add_item("Reset XLCD",        resetDevice,    0);
-	menu.add_item("About",			     menu_about,     0);
-	menu.add_item("Exit",              menu_exit,      0);
+	menu.add_item(F("Set serial mode"),   menu_mode,      0);
+	menu.add_item(F("Set data interval"), menu_interval,  0);
+	menu.add_item(F("Learn buttons"),     menu_learn,     0);
+	menu.add_item(F("Reset XLCD"),        resetDevice,    0);
+	menu.add_item(F("Exit"),              menu_exit,      0);
 
 	if(disp)
 		menu.display(0);
@@ -45,7 +44,7 @@ void menu_mode(int n)
 	// LCD size:  |----------------|---|
 	menu.add_item(strcat("Spy mode",		(proxymode ? "" : "on")),	menu_mode_set, 0);
 	menu.add_item(strcat("Proxy mode",	(proxymode ? "on" : "")),  menu_mode_set, 1);
-	menu.add_item("Back",               menu_root, 1);
+	menu.add_item(F("Back"),            menu_root, 1);
 
 	menu.display(0);
 }
@@ -66,16 +65,6 @@ void menu_mode_set(int on)
 }
 
 
-void menu_about(int n)
-{
-	myLCD.clear();
-	// LCD size:  |----------------|---|
-	myLCD.println("XLCD 0.1/08.2013");
-	myLCD.println("Frank Herrmann");
-	delay(1000);
-	menu_root(1);
-}
-
 void menu_interval(int n)
 {
 	menu.reinit(); // set all vars to zero
@@ -90,15 +79,14 @@ void menu_interval(int n)
 	menu.add_item(strcat("  5.0s",(ms == 5000 ? "*" : "")), _setInterval, 5000);
 	menu.add_item(strcat(" 30.0s",(ms == 30000 ? "*" : "")), _setInterval, 30000);
 
-	menu.add_item("Back",		menu_root,		1);
+	menu.add_item(F("Back"),		menu_root,		1);
 
 	menu.display(0);
 }
 
 void _setInterval(int ms){
 	myLCD.clear();
-	String setstr = ":i " + ms;
-	setinterval(setstr);
+	setinterval_ms(ms);
 	menu_interval(0);
 }
 

@@ -65,9 +65,11 @@
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
             <Value>_VMDEBUG=1</Value>
-            <Value>ARDUINO=105</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
@@ -108,6 +110,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
@@ -236,9 +240,11 @@
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
             <Value>_VMDEBUG=1</Value>
-            <Value>ARDUINO=105</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
@@ -279,6 +285,8 @@
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
@@ -428,21 +436,48 @@ build.core=arduino
 build.variant=standard
 runtime.ide.path=C:\Users\c5125630\Dropbox\arduino-1.0.5
 build.system.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\system
-software=ARDUINO
 runtime.ide.version=105
+originalid=atmega328p
 vm.core.include=arduino.h
 vm.boardsource.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino
-vm.boardsource.name=boards.txt
-vm.platformname.name=
+vm.platformname.name=avr
+build.arch=AVR
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%APPDATA%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.sketchfolder.platforms.exclude=avr
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\c5125630\Dropbox\Software
 compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
-includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire" 
+includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility" -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility"
 build.path=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p
 build.project_name=serialspy
 build.variant.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard
 archive_file=core.a
-object_file="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o"
-source_file="C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c"
-object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROMEx\EEPROMEx.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\AltSoftSerial\AltSoftSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\phi_interfaces\phi_interfaces.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
+object_file=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o
+source_file=C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c
+object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LCDMenu.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROM\EEPROM.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\SoftwareSerial\SoftwareSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Encoder\Encoder.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
+build.architecture=avr
+vmresolved.compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
@@ -451,6 +486,9 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
         <arduino.upload.speed>57600</arduino.upload.speed>
         <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
         <arduino.upload.port>COM5</arduino.upload.port>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -467,9 +505,11 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
             <Value>_VMDEBUG=1</Value>
-            <Value>ARDUINO=105</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcc.compiler.symbols.DefSymbols>
         <avrgcc.compiler.directories.IncludePaths>
@@ -510,6 +550,8 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
@@ -638,9 +680,11 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
           <ListValues>
             <Value>__AVR_ATmega328P__</Value>
             <Value>_VMDEBUG=1</Value>
-            <Value>ARDUINO=105</Value>
+            <Value>ARDUINO=101</Value>
+            <Value>ARDUINO_MAIN</Value>
             <Value>F_CPU=16000000L</Value>
             <Value>__AVR__</Value>
+            <Value>__cplusplus</Value>
           </ListValues>
         </avrgcccpp.compiler.symbols.DefSymbols>
         <avrgcccpp.compiler.directories.IncludePaths>
@@ -681,6 +725,8 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FastSPI_LED\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Firmata\utility</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash</Value>
+            <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Flash\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FlexiTimer2\utility</Value>
             <Value>C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\FreqCount</Value>
@@ -830,21 +876,48 @@ build.core=arduino
 build.variant=standard
 runtime.ide.path=C:\Users\c5125630\Dropbox\arduino-1.0.5
 build.system.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\system
-software=ARDUINO
 runtime.ide.version=105
+originalid=atmega328p
 vm.core.include=arduino.h
 vm.boardsource.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino
-vm.boardsource.name=boards.txt
-vm.platformname.name=
+vm.platformname.name=avr
+build.arch=AVR
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%APPDATA%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.sketchfolder.platforms.exclude=avr
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\c5125630\Dropbox\Software
 compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
-includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROMEx"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\AltSoftSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\phi_interfaces"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire" 
+includes= -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\cores\arduino"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\EEPROM"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\simpleThread"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\SoftwareSerial"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\MemoryFree"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\LiquidCrystal"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire"  -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Encoder\utility" -I"C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility"
 build.path=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p
 build.project_name=serialspy
 build.variant.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\arduino\variants\standard
 archive_file=core.a
-object_file="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o"
-source_file="C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c"
-object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROMEx\EEPROMEx.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\AltSoftSerial\AltSoftSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\phi_interfaces\phi_interfaces.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
+object_file=C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o
+source_file=C:\Users\c5125630\Dropbox\arduino-1.0.5\libraries\Wire\utility\twi.c
+object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LCDMenu.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\serialspy.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\EEPROM\EEPROM.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\SoftwareSerial\SoftwareSerial.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\MemoryFree\MemoryFree.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Encoder\Encoder.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\FastIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\I2CIO.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LCD.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_I2C.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR2W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\LiquidCrystal\LiquidCrystal_SR3W.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\Wire.cpp.o" "C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\atmega328p\Wire\utility\twi.c.o" 
+build.architecture=avr
+vmresolved.compiler.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr\bin\
+vmresolved.tools.path=C:\Users\c5125630\Dropbox\arduino-1.0.5\hardware\tools\avr
 </arduino.board.property_bag>
         <arduino.build.mcu>atmega328p</arduino.build.mcu>
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
@@ -853,6 +926,9 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
         <arduino.upload.speed>57600</arduino.upload.speed>
         <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
         <arduino.upload.port>COM5</arduino.upload.port>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -863,13 +939,10 @@ object_files="C:\Users\c5125630\AppData\Local\VMicro\Arduino\Builds\serialspy\at
     <Compile Include="LCDMenu.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Visual Micro\.serialspy.vsarduino.h">
+    <Compile Include="console.ino">
       <SubType>compile</SubType>
     </Compile>
-    <None Include="buttons_thread.ino">
-      <SubType>compile</SubType>
-    </None>
-    <Compile Include="console.ino">
+    <Compile Include="Visual Micro\.serialspy.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>
     <None Include="config_buttons.ino">

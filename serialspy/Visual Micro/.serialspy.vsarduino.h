@@ -1,16 +1,24 @@
-//Board = Arduino Duemilanove w/ ATmega328P
+/* 
+	Editor: http://www.visualmicro.com
+	        arduino debugger, visual micro +, free forum and wiki
+	
+	Hardware: Arduino Duemilanove w/ ATmega328P, Platform=avr, Package=arduino
+*/
+
 #define __AVR_ATmega328P__
 #define _VMDEBUG 1
-#define ARDUINO 105
+#define ARDUINO 101
+#define ARDUINO_MAIN
 #define F_CPU 16000000L
 #define __AVR__
+#define __cplusplus
 extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
-String getValue(String data, char separator, int index);
-void parsePCCommand(String line);
-void parseGrblLine(String line);
+char* split( char* string, char* delimiter, int index );
+void parsePCCommand(char* line);
+void parseGrblLine(char* line);
 void call_button(byte number);
 void call_button_1();
 void call_button_2();
@@ -26,27 +34,29 @@ void call_button_D();
 void call_button_E();
 void call_button_F();
 void call_button_G();
-void parse_command_line(String line);
+byte ReadButton();
+void parse_command_line(char* line);
+void show_button();
 void learn_button();
-void press_button(String line);
-void setinterval(String line);
+void press_button(char* line);
+void setinterval(char* line);
+void setinterval_ms(int ms);
 void resetDevice(int n);
-void memoryfree();
 void about();
 void menu_onchange(int state);
 void menu_root(int disp);
 void menu_mode(int n);
 void menu_mode_set(int on);
-void menu_about(int n);
 void menu_interval(int n);
 void _setInterval(int ms);
 void menu_learn(int n);
 void menu_exit(int n);
-void parse_status_line(String line);
-void parse_state_line(String myBuffer);
+void parse_status_line(char* line);
+void parse_state_line(char* myBuffer);
+void get_button_values();
 int get_set_button_power(int button, int intvalue);
-void simpleThread_setup(drawMenu);
-boolean simpleThread_loop(drawMenu);
+void EEPROMWriteInt(int p_address, int p_value);
+unsigned int EEPROMReadInt(int p_address);
 void simpleThread_setup(getPositions);
 boolean simpleThread_loop(getPositions);
 void simpleThread_setup(getStates);

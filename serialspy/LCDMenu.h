@@ -25,6 +25,7 @@ class LCDMenu
 	public:
 		LCDMenu(void *,int, int);
 		void add_item(const char*, void (*)(int), int);
+		void add_item(const __FlashStringHelper *, void (*)(int), int);
 		void display(int);
 		void mselect();
 		void about(String);
@@ -37,6 +38,18 @@ class LCDMenu
 		MY_LCD*  lcd;
 
 	private:
+		char buffer[21];
+
+		struct menuitem
+		{
+			char name[20];
+			void (*callback)(int);
+			int callback_param;
+		};
+
+		// maximum entrys (10)
+		struct menuitem items[10];
+
 
 }; //LCDMenu
 

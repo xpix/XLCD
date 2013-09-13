@@ -5,7 +5,7 @@
       <ModificationCount>0</ModificationCount>
       <objects>
         <rect id="1" Closed="true" p="-160,0,0" w="160" h="115" radius="5">
-          <ModificationCount>8</ModificationCount>
+          <ModificationCount>10</ModificationCount>
           <Tag>Grundkörper</Tag>
           <mat m="Identity" />
           <pts>
@@ -20,7 +20,7 @@
           </pts>
         </rect>
         <rect id="2" Closed="true" p="-121,67,0" w="61" h="25" radius="2">
-          <ModificationCount>68</ModificationCount>
+          <ModificationCount>70</ModificationCount>
           <Tag>Ausparung für LCD</Tag>
           <mat m="Identity" />
           <pts>
@@ -35,60 +35,60 @@
           </pts>
         </rect>
         <circle id="4" c="-138,80.5,0" d="7">
-          <ModificationCount>109</ModificationCount>
+          <ModificationCount>111</ModificationCount>
           <Tag>Bohrung RotaryEncoder 7mm</Tag>
           <mat m="Identity" />
         </circle>
         <circle id="6" c="-119.5,45,0" d="7.5">
-          <ModificationCount>195</ModificationCount>
+          <ModificationCount>197</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="7" c="-119.5,11,0" d="7.5">
-          <ModificationCount>190</ModificationCount>
+          <ModificationCount>192</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="8" c="-83,45,0" d="7.5">
-          <ModificationCount>275</ModificationCount>
+          <ModificationCount>277</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="9" c="-136,26.5,0" d="7.5">
-          <ModificationCount>199</ModificationCount>
+          <ModificationCount>201</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="10" c="-83,11,0" d="7.5">
-          <ModificationCount>185</ModificationCount>
+          <ModificationCount>187</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="11" c="-103,26.5,0" d="7.5">
-          <ModificationCount>148</ModificationCount>
+          <ModificationCount>150</ModificationCount>
           <mat m="Identity" />
         </circle>
         <text id="12" p1="-147,42,0" p2="6,-8,0" Height="12" Font="Agency FB" align="bottom,left">
-          <ModificationCount>278</ModificationCount>
+          <ModificationCount>280</ModificationCount>
           <mat m="Identity" />Move</text>
         <text id="13" p1="-115,42,0" p2="4,-10,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>193</ModificationCount>
+          <ModificationCount>195</ModificationCount>
           <mat m="Identity" />Y+</text>
         <text id="14" p1="-115,8,0" p2="5,-7,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>173</ModificationCount>
+          <ModificationCount>175</ModificationCount>
           <mat m="Identity" />Y-</text>
         <text id="15" p1="-98,24,0" p2="19,-8,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>206</ModificationCount>
+          <ModificationCount>208</ModificationCount>
           <mat m="Identity" />X+</text>
         <text id="16" p1="-146,24,0" p2="6,-7,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>187</ModificationCount>
+          <ModificationCount>189</ModificationCount>
           <mat m="Identity" />X-</text>
         <text id="17" p1="-78,42,0" p2="22,-10,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>235</ModificationCount>
+          <ModificationCount>237</ModificationCount>
           <mat m="Identity" />Z+</text>
         <text id="18" p1="-78,8,0" p2="22,-6,0" Height="8" Font="Agency FB" align="bottom,left">
-          <ModificationCount>203</ModificationCount>
+          <ModificationCount>205</ModificationCount>
           <mat m="Identity" />Z-</text>
         <text id="19" p1="-148,97,0" p2="-64,13,0" Height="12" Font="Agency FB" align="bottom,left">
-          <ModificationCount>203</ModificationCount>
+          <ModificationCount>205</ModificationCount>
           <mat m="Identity" />Menü</text>
         <rect id="20" Closed="true" p="-150,4,0" w="90" h="61" radius="2">
-          <ModificationCount>31</ModificationCount>
+          <ModificationCount>33</ModificationCount>
           <Tag>Ausparung für LCD</Tag>
           <mat m="Identity" />
           <pts>
@@ -103,7 +103,7 @@
           </pts>
         </rect>
         <rect id="21" Closed="true" p="-150,67,0" w="27" h="45" radius="2">
-          <ModificationCount>54</ModificationCount>
+          <ModificationCount>56</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-148,67,0</p>
@@ -117,7 +117,7 @@
           </pts>
         </rect>
         <rect id="22" Closed="true" p="-57,4,0" w="47" h="108" radius="2">
-          <ModificationCount>58</ModificationCount>
+          <ModificationCount>60</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-55,4,0</p>
@@ -131,61 +131,61 @@
           </pts>
         </rect>
         <circle id="25" c="-20,100,0" d="7.5">
-          <ModificationCount>339</ModificationCount>
+          <ModificationCount>341</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="26" c="-40,100,0" d="7.5">
-          <ModificationCount>344</ModificationCount>
+          <ModificationCount>346</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="27" c="-20,60,0" d="7.5">
-          <ModificationCount>408</ModificationCount>
+          <ModificationCount>410</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="28" c="-40,60,0" d="7.5">
-          <ModificationCount>413</ModificationCount>
+          <ModificationCount>415</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="29" c="-40,80,0" d="7.5">
-          <ModificationCount>451</ModificationCount>
+          <ModificationCount>453</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="30" c="-20,80,0" d="7.5">
-          <ModificationCount>446</ModificationCount>
+          <ModificationCount>448</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="31" c="-20,20,0" d="7.5">
-          <ModificationCount>404</ModificationCount>
+          <ModificationCount>406</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="32" c="-40,20,0" d="7.5">
-          <ModificationCount>427</ModificationCount>
+          <ModificationCount>429</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="33" c="-40,40,0" d="7.5">
-          <ModificationCount>402</ModificationCount>
+          <ModificationCount>404</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="34" c="-20,40,0" d="7.5">
-          <ModificationCount>397</ModificationCount>
+          <ModificationCount>399</ModificationCount>
           <mat m="Identity" />
         </circle>
         <text id="35" p1="-48,16,0" p2="71,-36,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
-          <ModificationCount>495</ModificationCount>
+          <ModificationCount>497</ModificationCount>
           <mat m="Identity" />1
 2
 3
 4
 5</text>
         <text id="36" p1="-29,16,0" p2="90,-36,0" Height="8" Font="Agency FB" linespace="2.12" align="bottom,center">
-          <ModificationCount>307</ModificationCount>
+          <ModificationCount>309</ModificationCount>
           <mat m="Identity" />A
 B
 C
 D
 E</text>
         <rect id="38" Closed="true" p="-121,94,0" w="61" h="18" radius="2">
-          <ModificationCount>13</ModificationCount>
+          <ModificationCount>15</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-119,94,0</p>
@@ -199,32 +199,32 @@ E</text>
           </pts>
         </rect>
         <text id="40" p1="-90,19,0" p2="-7,-14,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>180</ModificationCount>
+          <ModificationCount>182</ModificationCount>
           <mat m="Identity" />2</text>
         <text id="49" p1="-126,28,0" p2="-43,-5,0" Height="24" Font="Wingdings 3" align="bottom,left">
-          <ModificationCount>98</ModificationCount>
+          <ModificationCount>100</ModificationCount>
           <mat m="6.12303176911189E-17 1 0 0 -1 6.12303176911189E-17 0 0 0 0 1 0 -83 146 0 1" />2</text>
         <circle id="50" c="-154,109,0" d="5">
-          <ModificationCount>24</ModificationCount>
+          <ModificationCount>26</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="51" c="-155,5,0" d="5">
-          <ModificationCount>48</ModificationCount>
+          <ModificationCount>50</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="52" c="-6,5,0" d="5">
-          <ModificationCount>41</ModificationCount>
+          <ModificationCount>43</ModificationCount>
           <mat m="Identity" />
         </circle>
         <circle id="53" c="-5,109,0" d="5">
-          <ModificationCount>41</ModificationCount>
+          <ModificationCount>43</ModificationCount>
           <mat m="Identity" />
         </circle>
         <text id="57" p1="-119,96,0" p2="-4,-2,0" Height="17" Font="Agency FB" align="bottom,left">
-          <ModificationCount>29</ModificationCount>
+          <ModificationCount>31</ModificationCount>
           <mat m="Identity" />XLCD 0.1</text>
         <rect id="60" Closed="true" p="-133,50,0" w="87" h="60">
-          <ModificationCount>27</ModificationCount>
+          <ModificationCount>29</ModificationCount>
           <mat m="Identity" />
           <pts>
             <p>-133,50,0</p>
@@ -295,7 +295,7 @@ E</text>
             <prim>52</prim>
             <prim>53</prim>
           </primitive>
-          <TargetDepth state="Value">-4</TargetDepth>
+          <TargetDepth state="Value">-3</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>
@@ -345,7 +345,7 @@ E</text>
           <primitive>
             <prim>2</prim>
           </primitive>
-          <TargetDepth state="Value">-4</TargetDepth>
+          <TargetDepth state="Value">-3</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>
@@ -358,8 +358,8 @@ E</text>
           <CornerOvercut state="Default">False</CornerOvercut>
           <LeadInMove state="Default" />
           <LeadOutMove state="Default" />
-          <HoldingTabs state="Default">
-            <TabMethod>None</TabMethod>
+          <HoldingTabs state="Value">
+            <TabMethod>Manual</TabMethod>
             <Width>3</Width>
             <Height>3</Height>
             <MinimumTabs>3</MinimumTabs>
@@ -369,6 +369,40 @@ E</text>
             <UseLeadIns>False</UseLeadIns>
             <TabStyle>Triangle</TabStyle>
           </HoldingTabs>
+          <Tabs>
+            <HoldingTab>
+              <ParentEntityID>2</ParentEntityID>
+              <ParametricPoint>0.11864762779852081</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>-1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <ParentEntityID>2</ParentEntityID>
+              <ParametricPoint>0.42797144169778123</ParametricPoint>
+              <Normal>
+                <X>1</X>
+                <Y>-0</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <ParentEntityID>2</ParentEntityID>
+              <ParametricPoint>0.59323813899260414</ParametricPoint>
+              <Normal>
+                <X>0</X>
+                <Y>1</Y>
+              </Normal>
+            </HoldingTab>
+            <HoldingTab>
+              <ParentEntityID>2</ParentEntityID>
+              <ParametricPoint>0.91610667891792918</ParametricPoint>
+              <Normal>
+                <X>-1</X>
+                <Y>-0</Y>
+              </Normal>
+            </HoldingTab>
+          </Tabs>
           <SideProfile state="Default" />
         </profile>
         <profile>
@@ -395,7 +429,7 @@ E</text>
           <primitive>
             <prim>1</prim>
           </primitive>
-          <TargetDepth state="Value">-4</TargetDepth>
+          <TargetDepth state="Value">-3</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>
@@ -511,7 +545,7 @@ E</text>
             <prim>49</prim>
             <prim>57</prim>
           </primitive>
-          <TargetDepth state="Value">-1</TargetDepth>
+          <TargetDepth state="Value">-0.4</TargetDepth>
           <DepthIncrement state="Default">0.4</DepthIncrement>
           <FinalDepthIncrement state="Default">0</FinalDepthIncrement>
           <CutOrdering state="Default">DepthFirst</CutOrdering>

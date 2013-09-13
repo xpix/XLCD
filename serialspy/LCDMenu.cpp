@@ -5,7 +5,6 @@
 * Author: C5125630
 */
 
-
 #include "Arduino.h"
 #include "LCDMenu.h"
 
@@ -16,16 +15,6 @@ int lcd_r =	0;
 const char LCD_select_char = '>';
 int LCD_offset =	-1;
 int LCD_select =	0;
-
-struct menuitem
-{
-	char name[20];
-	void (*callback)(int);
-   int callback_param;
-};
-
-// maximum entrys (10)
-struct menuitem *items;
 
 // callback onchange
 void (*onchange_cb)(int);
@@ -48,6 +37,13 @@ void LCDMenu::reinit()
 	LCD_offset =	-1;
 	LCD_select =	0;
 	menucounter= 	0;
+}
+
+// add menu entry [menutext, callback]
+void LCDMenu::add_item(const __FlashStringHelper *ifsh, void (*menu_callback)(int), int callback_param)
+{
+	strcpy_P(buffer, (char*)pgm_read_word(&(ifsh)));
+	add_item(buffer, menu_callback, callback_param);
 }
 
 
