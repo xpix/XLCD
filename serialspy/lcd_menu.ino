@@ -7,6 +7,7 @@
  * Last edit: [8/30/2013 c5125630]
  */ 
 
+/*
 void menu_onchange(int state){
 	if(state == 0){
 		// Restart Threads if call exit Menu
@@ -98,4 +99,4 @@ void menu_exit(int n)
 {
 	menu.mexit();
 }
-
+*/

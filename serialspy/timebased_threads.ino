@@ -8,45 +8,51 @@
  */ 
 
 /* 
- ************************************* 
- * Thread to send a '?' to 
- * get GRBL position informations
- ************************************* 
- */
-  void simpleThread_setup(getPositions)
-  {
-    // output
-  }  
+	************************************* 
+	* Thread to send a '?' to 
+	* get GRBL position informations
+	************************************* 
+	*/
+void simpleThread_setup(getPositions)
+{
+	// output
+}  
 
-  boolean simpleThread_loop(getPositions)
-  {
-    // output counter value
-    grblSerial.print('?');
+boolean simpleThread_loop(getPositions)
+{
+	// output counter value
+	grblSerial.print('?');
 
-	#if defined(DEBUG)
-		Serial.print(F("<FreeMemory: "));
-		Serial.print(freeMemory());
-		Serial.println(F(">"));
-	#endif
+#if defined(DEBUG)
+	Serial.print(F("<Free "));
+	Serial.print(freeRam());
+	Serial.println(F(">"));
+#endif
     
-    return false;    
-  }
+	return false;    
+}
 
 /* 
- ************************************* 
- * Thread to send a '$G' to 
- * get GRBL position informations
- ************************************* 
- */
-  void simpleThread_setup(getStates)
-  {
-    // output
-  }  
+	************************************* 
+	* Thread to send a '$G' to 
+	* get GRBL position informations
+	************************************* 
+	*/
+void simpleThread_setup(getStates)
+{
+	// output
+}  
 
-  boolean simpleThread_loop(getStates)
-  {
-    // output counter value
-    grblSerial.print("$G\n");
+boolean simpleThread_loop(getStates)
+{
+	// output counter value
+	grblSerial.print("$G\n");
     
-    return false;    
-  }
+	return false;    
+}
+
+int freeRam () {
+	extern int __heap_start, *__brkval;
+	int v;
+	return (int) &v - (__brkval == 0 ? (int) &__heap_start : (int) __brkval);
+}

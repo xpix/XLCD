@@ -20,11 +20,13 @@ void parse_status_line(char* line)
    // 000.000  000.000
 
    // XXX: to use a switch to display work position or other things :)
-   myLCD.clear();
+   //myLCD.clear();
 
 	char delim[] = "<,:";
 
    // State ..
+   myLCD.setCursor(0,0); // letter, row
+   myLCD.print("     ");
    char* temp = split(line, delim, 0);
    myLCD.setCursor(0,0); // letter, row
    myLCD.print(temp);
@@ -60,55 +62,73 @@ void parse_state_line(char* myBuffer)
    //             mm                   TNr Feed
    // G0 G54 G17 G21 G90 G94 M0 M5 M9 T0 F500.000
 
-   // Feed
-   char *temp = split(split(myBuffer, delim, 10), ".", 0);
-   myLCD.setCursor(6,2); //third row
-   myLCD.print(temp);
-
-   // Tool
-   temp = split(myBuffer, delim, 9);
-   myLCD.setCursor(3,2);
-   myLCD.print(temp);
-
-   temp = split(myBuffer, delim, 7);
-   if(temp == "M5") temp = "on ";
-   if(temp != "M5") temp = "off";
+   char *temp = split(myBuffer, delim, 7);
+   if( strcmp(temp, "M5")==0) 
+      temp = "On ";
+   if( strcmp(temp, "M5")!=0) 
+      temp = "Off";
    myLCD.setCursor(0,2); //third row
    myLCD.print(temp);
 
-   // last row
+   myLCD.print(" ");
+
    // Move
    temp = split(myBuffer, delim, 0);
-   if(temp == "G")  temp = "RAP";
-   if(temp == "G0") temp = "RAP";
-   if(temp == "G1") temp = "LIN";
-   if(temp == "G2") temp = "CW ";
-   if(temp == "G3") temp = "CCW";
-   myLCD.setCursor(3,2); //third row
-   myLCD.print(temp);
+   if(strcmp(temp, "G")==0 || strcmp(temp, "G0")==0)  
+      myLCD.print("RAP");
+   if(strcmp(temp, "G1")==0)
+      myLCD.print("LIN");
+   if(strcmp(temp, "G2")==0)
+      myLCD.print("CW ");
+   if(strcmp(temp, "G3")==0)
+      myLCD.print("CCW");
+
+   // Feed
+   temp = split(split(myBuffer, delim, 10), ".", 0);
+   char *c2 = strrchr(temp, 'F');
+   *c2 = ' ';
+   size_t len = strlen(temp) + 4;
+   myLCD.setCursor((LCD_cols - len),2);
+   myLCD.print(strcat(temp,"mm/s"));
+
+   // next line
+   myLCD.setCursor(0,3);
 
    // mm or inch
    temp = split(myBuffer, delim, 3);
-   if(temp == "G21"){ 
-     temp = "MM";
+   if(strcmp(temp, "G21")==0){ 
+      myLCD.print("mm");
    } else {
-     temp = "IN";
+      myLCD.print("in");
    }
-   myLCD.setCursor(0,3);
-   myLCD.print(temp);
+
+   myLCD.print(" ");
 
    // Plane
    temp = split(myBuffer, delim, 2);
-   if(temp == "G17") temp = "XY";
-   if(temp == "G18") temp = "ZX";
-   if(temp == "G19") temp = "YZ";
-   myLCD.setCursor(7,3);
+   if(strcmp(temp, "G17")==0) temp = "XY";
+   if(strcmp(temp, "G18")==0) temp = "ZX";
+   if(strcmp(temp, "G19")==0) temp = "YZ";
    myLCD.print(temp);
 
-   // Flow
-   temp = split(myBuffer, delim, 6);
-   myLCD.setCursor(10,3);
+   myLCD.print(" ");
+
+   // Tool
+   temp = split(myBuffer, delim, 9);
    myLCD.print(temp);
+
+   myLCD.print(" ");
+
+   // Flow (Pause, Stop ...)
+   temp = split(myBuffer, delim, 6);
+   if(strcmp(temp, "M0")==0) temp = "Pause";
+   if(strcmp(temp, "M2")==0) temp = "End";
+   if(strcmp(temp, "M30")==0) temp = "End";
+   len = strlen(temp);
+   myLCD.setCursor((LCD_cols - len),3);
+   myLCD.print(temp);
+
+
 }
 
 

@@ -28,6 +28,7 @@ void parse_command_line(char* line)
    // Commands handle:
 #ifdef DEBUG
 	if( line[1] == 's') return show_button();
+	if( line[1] == 'f') return free_ram();
 #endif
    if( line[1] == 'l') return learn_button();
    if( line[1] == 'b') return press_button(line);
@@ -40,17 +41,23 @@ void parse_command_line(char* line)
 }
 
 #ifdef DEBUG
-void show_button(){
-   Serial.println(F("show buttons ... "));
-   for (int i = 0; i <= COUNT_OF(button_power); i++)
-   {
-		int value = get_set_button_power(i, 0);
-		Serial.print("Button ");
-		Serial.print(i);
-		Serial.print(" ");
-		Serial.println(value);
+	void show_button(){
+		Serial.println(F("show buttons ... "));
+		for (int i = 0; i <= COUNT_OF(button_power); i++)
+		{
+			int value = get_set_button_power(i, 0);
+			Serial.print("Button ");
+			Serial.print(i);
+			Serial.print(" ");
+			Serial.println(value);
+		}
 	}
-}
+
+	void free_ram(){
+		Serial.print(F("Free ram: "));
+		Serial.println(freeRam());
+	}
+
 #endif
 
 
@@ -101,13 +108,13 @@ void setinterval(char* line){
 
 void setinterval_ms(int ms){
    if(ms == 0){
-		ms = simpleThread_dynamic_getLoopTime(getPositions);
+		//ms = simpleThread_dynamic_getLoopTime(getPositions);
 	} else {
 		EEPROMWriteInt(EEPROM_INTERVAL, ms);
 	}
 
-   simpleThread_dynamic_setLoopTime(getPositions, ms);
-   simpleThread_dynamic_setLoopTime(getStates, ms);
+   // simpleThread_dynamic_setLoopTime(getPositions, ms);
+   // simpleThread_dynamic_setLoopTime(getStates, ms);
    Serial.print(F("<Interval: "));
    Serial.print(ms);
    Serial.println(F(">"));

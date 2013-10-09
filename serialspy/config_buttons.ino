@@ -81,6 +81,7 @@ byte ReadButton()
 	buttonJustPressed  = false;
 	buttonJustReleased = false;
 
+#ifdef ENC_A
 	// Check also RotaryEnoder Button and return this button as 'S'
 	// Read Rotary direction
 	long newEncoder = encoder.read();
@@ -94,6 +95,7 @@ byte ReadButton()
 	if (digitalRead(ENC_S)) {
 	   button = 'S';
 	}
+#endif
 
    //read the button ADC pin voltage first on A then on B
    char buttonrow = 'A';
