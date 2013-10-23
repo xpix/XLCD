@@ -34,22 +34,19 @@
 // only for debugging
 #define DEBUG
 
+#define VERSION         0.2
+
 // Makros
 #define COUNT_OF(x) ((sizeof(x)/sizeof(0[x])) / ((size_t)(!(sizeof(x) % sizeof(0[x])))))
-
-// XXX: 
-// Test with SoftwareSerial, because AltSerial need Ports 8 and 9. 
-// PCB Design use follow Connects
-//    PC => ( Soft: 9,10 ) => XLCD => (UART: 0,1) => XStepper
 
 // GRBL Serial connect pins ----------------------
 #define GRBL_RX			8
 #define GRBL_TX			9 
 
 // LCD -------------------------------------------
-//#define LCD_ADDR		0x27  // I2C LCD Address
-#define LCD_4BIT
-#define LCD_cols			16
+#define LCD_ADDR		0x27  // I2C LCD Address
+//#define LCD_4BIT
+#define LCD_cols			20
 #define LCD_rows			4
 
 
@@ -61,6 +58,8 @@
 // Buttons ---------------------------------------
 #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
 #define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
+//#define BUTTONS_C_ADC_PIN  A2    // A2 is the button ADC input C [optional]
+//#define BUTTONS_D_ADC_PIN  A3    // A3 is the button ADC input D [optional]
 #define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
 #define BUTTON_NONE        0     // no pressed state
 
@@ -97,6 +96,12 @@ AltSoftSerial grblSerial;
 simpleThread_init(_sT_cnt);   // init threads
 simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_start ,  getPositions);	// get position info (?)
 simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 6000, _sT_start ,  getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
+// make a group
+simpleThread_group_init(group_one, 2) {
+   simpleThread_group(getPositions),
+   simpleThread_group(getStates)
+};
+  
 
 // All inits for LCD control
 #if defined(LCD_4BIT)
@@ -152,7 +157,9 @@ void setup()
    // This is the serial connect to PC, we get some commands
    // but we can also print some additional information about this module
    // and the parser from Client program will ignore this
-   Serial.println(F("<XLCD 0.2>"));
+   Serial.print(F("<XLCD "));
+   Serial.print(VERSION);
+   Serial.println(F(">"));
    Serial.println(F("<All commands for XLCD start with a colon ':'>"));
    Serial.println(F("<Call help with ':?'>"));
 
@@ -160,7 +167,8 @@ void setup()
    myLCD.begin(LCD_cols,LCD_rows); // letter, row
 
    myLCD.setCursor(0,0); // letter, row
-   myLCD.print(F("XLCD 0.1"));
+   myLCD.print(F("XLCD "));
+   myLCD.print(VERSION);
    myLCD.setCursor(0,1); // letter, row
    myLCD.print(F("Connect ... "));
    
@@ -183,58 +191,59 @@ int gr = 0;
 
 void loop() 
 { 
-
    // Jobs
-	simpleThread_run(_sT_priority);
+   simpleThread_run(_sT_priority);
 
 	byte button = ReadButton();
 	if(button && buttonJustPressed){
 		call_button(button);
 	}
 
-  // Get data from GRBL ==> PC
-  if (grblSerial.available()) {
-    char c = grblSerial.read();
-
-    // wait for a complete line 
-    // and parse it
-    if(c == '\n'){
-      parseGrblLine(grserial);
-		gr = 0;
-      grserial[0] = '\0';
-    } else {
-		if(gr < BUFFER_SIZE)
-			grserial[gr++] = c;
-    }
-
-    // dont send data from $G to Serial, 
-    // cuz UGS don't understand this
-    if(grserial[0] != '[')
-      Serial.print(c);
-
-
-  }
+   // Get data from GRBL ==> PC
+   if (grblSerial.available()) {
+      char c = grblSerial.read();
+   
+      // wait for a complete line 
+      // and parse it
+      if(c == '\n'){
+         parseGrblLine(grserial);
+   		gr = 0;
+         grserial[0] = '\0';
+      } else {
+   		if(gr < BUFFER_SIZE)
+   			grserial[gr++] = c;
+      }
+   
+      // dont send data from $G to Serial, 
+      // cuz UGS don't understand this
+      // dont send data if string empty
+      if(grserial[0] != '[' || grserial[0] != '\0'){
+         Serial.print(c);
+      }
+   }
 
   // Get data from PC ==> GRBL
-  if (Serial.available()) {
-    char c = Serial.read();
+   if (Serial.available()) {
+      char c = Serial.read();
+      
+      // wait for a complete line
+      // and parse it
+      if(c == '\n'){
+         parsePCCommand(pcserial);
+         pc = 0;
+         pcserial[0] = '\0';
+      } else {
+         // if to big ...
+         if(pc < BUFFER_SIZE){
+         	pcserial[pc++] = c;
+         }
+      }
 
-    // wait for a complete line
-    // and parse it
-    if(c == '\n'){
-		parsePCCommand(pcserial);
-		pc = 0;
-      pcserial[0] = '\0';
-    } else {
-      // if to big ...
-      if(pc < BUFFER_SIZE)
-			pcserial[pc++] = c;
-    }
-
-    // dont send serial commands (:char) to grbl
-    if( pcserial[0] != ':' )
-	   grblSerial.print(c);
-  }
+      // dont send serial commands (:char) to grbl
+      if(pcserial[0] != ':' || pcserial[0] != '\0'){
+	      grblSerial.print(c);
+      }
+   }
 }//LOOP
 
 

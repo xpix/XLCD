@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.4">
+<eagle version="6.5.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,16 +39,16 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -8978,7 +8978,7 @@ DIN A4, landscape with extra doc field</description>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="R2" library="resistor" deviceset="R-EU_" device="R1206" value="220"/>
+<part name="R2" library="resistor" deviceset="R-EU_" device="R1206" value="0-220R"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="BUTTONS" library="con-ml" deviceset="ML20" device=""/>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
@@ -9016,7 +9016,7 @@ DIN A4, landscape with extra doc field</description>
 <part name="R21" library="resistor" deviceset="R-EU_" device="R1206" value="680"/>
 <part name="R22" library="resistor" deviceset="R-EU_" device="R1206" value="680"/>
 <part name="R23" library="resistor" deviceset="R-EU_" device="R1206" value="680"/>
-<part name="AN" library="pinhead" deviceset="PINHD-1X2" device="" value="Analog"/>
+<part name="&lt;BUTTONS_D/C" library="pinhead" deviceset="PINHD-1X2" device="" value="Analog"/>
 </parts>
 <sheets>
 <sheet>
@@ -9056,8 +9056,8 @@ DIN A4, landscape with extra doc field</description>
 <wire x1="-2.54" y1="38.1" x2="-2.54" y2="58.42" width="0.1524" layer="94"/>
 <text x="-1.524" y="55.626" size="1.778" layer="94">Green Red LED to display RS232 State</text>
 <text x="63.5" y="63.5" size="1.778" layer="94" rot="R180">LCD 4bit</text>
-<text x="78.74" y="50.8" size="1.778" layer="94">POT_A connected to INT0 for Rotary Encoder use A and B</text>
-<text x="109.22" y="91.44" size="1.778" layer="94">More as 16 Buttons for Control and makros!</text>
+<text x="109.22" y="48.26" size="1.778" layer="94">POT_A connected to INT0 for Rotary Encoder use A and B</text>
+<text x="73.66" y="104.14" size="1.778" layer="94">More as 16 Buttons for Control and makros!</text>
 </plain>
 <instances>
 <instance part="XSTEP" gate="A" x="144.78" y="20.32"/>
@@ -9096,7 +9096,10 @@ DIN A4, landscape with extra doc field</description>
 <instance part="GND1" gate="1" x="53.34" y="83.82" rot="R90"/>
 <instance part="R2" gate="G$1" x="50.8" y="68.58" rot="R180"/>
 <instance part="P+1" gate="VCC" x="63.5" y="68.58" rot="R270"/>
-<instance part="BUTTONS" gate="1" x="149.86" y="66.04"/>
+<instance part="BUTTONS" gate="1" x="149.86" y="66.04" smashed="yes">
+<attribute name="VALUE" x="146.05" y="48.26" size="1.778" layer="96"/>
+<attribute name="NAME" x="143.51" y="79.502" size="1.778" layer="95"/>
+</instance>
 <instance part="P+9" gate="VCC" x="144.78" y="96.52" rot="R90"/>
 <instance part="R4" gate="G$1" x="152.4" y="96.52" rot="R180"/>
 <instance part="P+7" gate="VCC" x="76.2" y="96.52" rot="R90"/>
@@ -9133,7 +9136,7 @@ DIN A4, landscape with extra doc field</description>
 <instance part="R21" gate="G$1" x="195.58" y="91.44" rot="R90"/>
 <instance part="R22" gate="G$1" x="200.66" y="91.44" rot="R90"/>
 <instance part="R23" gate="G$1" x="205.74" y="91.44" rot="R90"/>
-<instance part="AN" gate="G$1" x="144.78" y="-43.18"/>
+<instance part="&lt;BUTTONS_D/C" gate="G$1" x="144.78" y="-43.18"/>
 </instances>
 <busses>
 </busses>
@@ -9544,8 +9547,9 @@ DIN A4, landscape with extra doc field</description>
 <segment>
 <pinref part="R4" gate="G$1" pin="1"/>
 <pinref part="R16" gate="G$1" pin="2"/>
-<wire x1="157.48" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="96.52" x2="160.02" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="R17" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="96.52" x2="170.18" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="170.18" y1="96.52" x2="175.26" y2="96.52" width="0.1524" layer="91"/>
 <junction x="170.18" y="96.52"/>
 <pinref part="R18" gate="G$1" pin="2"/>
@@ -9566,7 +9570,9 @@ DIN A4, landscape with extra doc field</description>
 <pinref part="R23" gate="G$1" pin="2"/>
 <wire x1="200.66" y1="96.52" x2="205.74" y2="96.52" width="0.1524" layer="91"/>
 <junction x="200.66" y="96.52"/>
-<label x="162.306" y="97.282" size="1.778" layer="95"/>
+<wire x1="160.02" y1="96.52" x2="160.02" y2="91.44" width="0.1524" layer="91"/>
+<junction x="160.02" y="96.52"/>
+<label x="157.48" y="93.98" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
 <net name="BUTTONS_B" class="0">
@@ -9576,7 +9582,6 @@ DIN A4, landscape with extra doc field</description>
 <label x="86.36" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="104.14" y="99.06" size="1.778" layer="95" rot="R180"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <pinref part="R10" gate="G$1" pin="2"/>
 <wire x1="101.6" y1="96.52" x2="106.68" y2="96.52" width="0.1524" layer="91"/>
@@ -9597,10 +9602,14 @@ DIN A4, landscape with extra doc field</description>
 <junction x="127" y="96.52"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="88.9" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="88.9" y1="96.52" x2="91.44" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="96.52" x2="96.52" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="96.52" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
 <junction x="96.52" y="96.52"/>
 <junction x="101.6" y="96.52"/>
+<wire x1="91.44" y1="96.52" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
+<junction x="91.44" y="96.52"/>
+<label x="88.9" y="88.9" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -9829,7 +9838,7 @@ DIN A4, landscape with extra doc field</description>
 <label x="86.36" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AN" gate="G$1" pin="1"/>
+<pinref part="&lt;BUTTONS_D/C" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="-40.64" x2="129.54" y2="-40.64" width="0.1524" layer="91"/>
 <label x="124.46" y="-40.64" size="1.778" layer="95"/>
 </segment>
@@ -9841,7 +9850,7 @@ DIN A4, landscape with extra doc field</description>
 <label x="86.36" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="AN" gate="G$1" pin="2"/>
+<pinref part="&lt;BUTTONS_D/C" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="-43.18" x2="129.54" y2="-43.18" width="0.1524" layer="91"/>
 <label x="124.46" y="-43.18" size="1.778" layer="95"/>
 </segment>

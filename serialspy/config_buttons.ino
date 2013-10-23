@@ -10,6 +10,7 @@
 void call_button(byte number){
    switch (number)
    {
+      case 0: call_button_0(); break;
       case 1: call_button_1(); break;
       case 2: call_button_2(); break;
       case 3: call_button_3(); break;
@@ -19,13 +20,14 @@ void call_button(byte number){
       case 7: call_button_7(); break;
 
 		// row B +10
-      case '11': call_button_A(); break;
-      case '12': call_button_B(); break;
-      case '13': call_button_C(); break;
-      case '14': call_button_D(); break;
-      case '15': call_button_E(); break;
-      case '16': call_button_F(); break;
-      case '17': call_button_G(); break;
+      case 10: call_button_A(); break;
+      case 11: call_button_B(); break;
+      case 12: call_button_C(); break;
+      case 13: call_button_D(); break;
+      case 14: call_button_E(); break;
+      case 15: call_button_F(); break;
+      case 16: call_button_G(); break;
+      case 17: call_button_F(); break;
    }
 }
 
@@ -34,6 +36,8 @@ void call_button(byte number){
  * Button Configuration
  * =============================================== 
  */
+
+void call_button_0(){ };
 
 void call_button_1() {
    // Example call Homing

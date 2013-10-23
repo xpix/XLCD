@@ -62,6 +62,9 @@ void parse_command_line(char* line)
 
 
 void learn_button(){
+
+   simpleThread_group_stop(group_one);
+
    Serial.println(F("learn buttons ... "));
 	for (int i = 0; i <= COUNT_OF(button_power); i++)
    {
@@ -73,18 +76,21 @@ void learn_button(){
       for(;;){
 			delay(200);
 			buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
-			if(buttonVoltage > 1000){
-				buttonVoltage = analogRead( BUTTONS_B_ADC_PIN );
-				if(buttonVoltage < 1000){
-					isB = true;
-				}
-			}
-		if(buttonVoltage < 1000) 
-			break;
+   		if(buttonVoltage < 1000) 
+   			break;
 		};
-		get_set_button_power(i + (isB ? 10 : 0), buttonVoltage);
+#ifdef DEBUG
+      Serial.print(F("<Set Button: "));
+      Serial.print(i);
+      Serial.print(F(" to: "));
+      Serial.print(buttonVoltage);
+      Serial.println(F(">"));
+#endif
+		get_set_button_power(i, buttonVoltage);
    }
    Serial.println(F("<Button values saved!>"));
+
+   simpleThread_group_restart(group_one);
 }
 
 
@@ -103,18 +109,18 @@ void press_button(char* line){
 
 void setinterval(char* line){
    int ms = atoi(split(line, " ", 1));
-   setinterval_ms(ms);
+   if(ms){
+      setinterval_ms(ms);
+   }
 }
 
 void setinterval_ms(int ms){
-   if(ms == 0){
-		//ms = simpleThread_dynamic_getLoopTime(getPositions);
-	} else {
+   if(ms){
 		EEPROMWriteInt(EEPROM_INTERVAL, ms);
+      simpleThread_dynamic_setLoopTime(getPositions, ms);
+      simpleThread_dynamic_setLoopTime(getStates, ms);
 	}
 
-   // simpleThread_dynamic_setLoopTime(getPositions, ms);
-   // simpleThread_dynamic_setLoopTime(getStates, ms);
    Serial.print(F("<Interval: "));
    Serial.print(ms);
    Serial.println(F(">"));
