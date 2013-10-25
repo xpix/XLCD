@@ -107,7 +107,7 @@ byte ReadButton()
    if(buttonVoltage <= 1000 + BUTTONHYSTERESIS){
 	   // test all values to discover button
 	   for (int i = COUNT_OF(button_power); i >= 0 ; i--) {
-		  if( buttonVoltage < ( get_set_button_power(i,0) - BUTTONHYSTERESIS ) )
+		  if( buttonVoltage < ( get_set_button_power(i,0) + BUTTONHYSTERESIS ) )
 		  {
 			 button = i;
 		  }
@@ -131,6 +131,17 @@ byte ReadButton()
       buttonJustPressed  = false;
       buttonJustReleased = true;
    }
+
+#ifdef DEBUG
+   if(buttonWas != button && button < 20){
+      Serial.print(F("<Pushed Button: "));
+      Serial.print(button);
+      Serial.println(F(">"));
+      Serial.print(F("<Buttonvoltage: "));
+      Serial.print(buttonVoltage);
+      Serial.println(F(">"));
+   }
+#endif
 
    //save the latest button value, for change event detection next time round
    buttonWas = button;   

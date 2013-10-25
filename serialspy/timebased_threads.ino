@@ -7,6 +7,28 @@
  * Last edit: 30.08.2013
  */ 
 
+
+/* 
+	************************************* 
+	* Thread to get buttons
+	************************************* 
+	*/
+void simpleThread_setup(readButtons)
+{
+	// output
+}  
+
+boolean simpleThread_loop(readButtons)
+{
+	byte button = ReadButton();
+	if(button && button < 20 && buttonJustPressed){
+		call_button(button);
+	}
+    
+	return false;    
+}
+
+
 /* 
 	************************************* 
 	* Thread to send a '?' to 

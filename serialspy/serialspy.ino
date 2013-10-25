@@ -92,10 +92,12 @@ char				grserial[BUFFER_SIZE];
 AltSoftSerial grblSerial;
 
 // Add Threads to refresh status informations from GRBL
-#define _sT_cnt  _sT_cnt_2    // count of threads(?, $G)
+#define _sT_cnt  _sT_cnt_3    // count of threads(?, $G)
 simpleThread_init(_sT_cnt);   // init threads
 simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_start ,  getPositions);	// get position info (?)
 simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 6000, _sT_start ,  getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
+simpleThread_new_timebased_dynamic  (_sT_P3  , _sT_millis,  200, _sT_start ,  readButtons);	// get button value
+
 // make a group
 simpleThread_group_init(group_one, 2) {
    simpleThread_group(getPositions),
@@ -193,11 +195,6 @@ void loop()
 { 
    // Jobs
    simpleThread_run(_sT_priority);
-
-	byte button = ReadButton();
-	if(button && buttonJustPressed){
-		call_button(button);
-	}
 
    // Get data from GRBL ==> PC
    if (grblSerial.available()) {

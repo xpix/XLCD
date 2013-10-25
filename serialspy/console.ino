@@ -43,7 +43,7 @@ void parse_command_line(char* line)
 #ifdef DEBUG
 	void show_button(){
 		Serial.println(F("show buttons ... "));
-		for (int i = 0; i <= COUNT_OF(button_power); i++)
+		for (int i = 0; i < COUNT_OF(button_power); i++)
 		{
 			int value = get_set_button_power(i, 0);
 			Serial.print("Button ");
@@ -66,17 +66,18 @@ void learn_button(){
    simpleThread_group_stop(group_one);
 
    Serial.println(F("learn buttons ... "));
-	for (int i = 0; i <= COUNT_OF(button_power); i++)
+   unsigned int buttonVoltage = 1000;
+	for (int i = 0; i < COUNT_OF(button_power); i++)
    {
+      unsigned int oldbuttonVoltage = buttonVoltage;
       Serial.print(F("<Please push button: "));
       Serial.print(i);
       Serial.println(F(" ...>"));
-      unsigned int buttonVoltage = 1000;
 		boolean isB = false;
       for(;;){
 			delay(200);
 			buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
-   		if(buttonVoltage < 1000) 
+   		if(buttonVoltage < 1000 && buttonVoltage != oldbuttonVoltage) 
    			break;
 		};
 #ifdef DEBUG
