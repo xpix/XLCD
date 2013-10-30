@@ -17,10 +17,7 @@
 #include <AltSoftSerial.h>
 #include <Encoder.h>
 
-// local libs
-//#include "LCDMenu.h"
-
-/* Prototype on Arduino UNO or compatible
+/* XLCD Prototype on Arduino UNO or compatible
  * Frank (xpix) Herrmann / 07/2013
  *
  */
@@ -30,6 +27,61 @@
  * Defines
  * =============================================== 
  */
+
+// MODE ------------------------------------------
+#define MODE_PROXY   // works as proxy between PC and GRBL
+//#define MODE_SPY   // works only as spy on the TX line 
+                     // (no buttons, no serial console, no interaction with grbl)
+
+// Serial speed ----------------------------------
+#define PC_SERIAL       9600
+#define GRBL_SERIAL     19200
+
+// LCD -------------------------------------------
+#define LCD_ADDR		   0x27  // I2C LCD Address
+//#define LCD_4BIT
+
+#define LCD_cols			20
+#define LCD_rows			4
+
+#if defined(LCD_4BIT)
+   #define LCD_EN          12
+   #define LCD_RW          11
+   #define LCD_D4          4
+   #define LCD_D5          5
+   #define LCD_D6          6
+   #define LCD_D7          7
+#elif defined(LCD_ADDR)
+   #define LCD_EN          2
+   #define LCD_RW          1
+   #define LCD_RS          0
+   #define LCD_D4          4
+   #define LCD_D5          5
+   #define LCD_D6          6
+   #define LCD_D7          7
+#endif
+
+
+#if defined(MODE_PROXY)
+   // Rotary Encoder --------------------------------
+   #define ENC_A              2     // Encoder interrupt pin
+   #define ENC_B              3     // Encoder second pin
+   #define ENC_S              10    // Encoder select pin
+
+   // Buttons ---------------------------------------
+   #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
+   #define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
+   //#define BUTTONS_C_ADC_PIN  A2    // A2 is the button ADC input C [optional]
+   //#define BUTTONS_D_ADC_PIN  A3    // A3 is the button ADC input D [optional]
+   #define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
+   #define BUTTON_NONE        0     // no pressed state
+   
+   // EEPROM addresses
+   #define EEPROM_BUTTONS		100
+   #define EEPROM_INTERVAL		150
+#endif
+
+// ========================== END Defines ========
 
 // only for debugging
 #define DEBUG
@@ -43,30 +95,6 @@
 #define GRBL_RX			8
 #define GRBL_TX			9 
 
-// LCD -------------------------------------------
-#define LCD_ADDR		0x27  // I2C LCD Address
-//#define LCD_4BIT
-#define LCD_cols			20
-#define LCD_rows			4
-
-
-// Rotary Encoder --------------------------------
-#define ENC_A           2     // Encoder interrupt pin
-#define ENC_B           3     // Encoder second pin
-#define ENC_S           10    // Encoder select pin
-
-// Buttons ---------------------------------------
-#define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
-#define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
-//#define BUTTONS_C_ADC_PIN  A2    // A2 is the button ADC input C [optional]
-//#define BUTTONS_D_ADC_PIN  A3    // A3 is the button ADC input D [optional]
-#define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
-#define BUTTON_NONE        0     // no pressed state
-
-// EEPROM addresses
-#define EEPROM_BUTTONS		100
-#define EEPROM_INTERVAL		150
-
 
 // Measure Power on when pressed button and note this value here
 // use resistor network 680 Ohm
@@ -75,10 +103,9 @@ int button_power[] = {30, 262, 415, 517, 589, 643, 685, 718}; // Power data for 
 
 // glob Vars  ------------------------------------
 const int		BUFFER_SIZE			 = 70;
-boolean        proxymode			 = true;
 byte				buttonJustPressed  = false;         //this will be true after a ReadButtons() call if triggered
 byte				buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
-byte				buttonWas          = BUTTON_NONE;   //used by ReadButtons() for detection of button events
+byte				buttonWas          = 0;             //used by ReadButtons() for detection of button events
 volatile byte  button_pressed;
 char				pcserial[BUFFER_SIZE];
 char				grserial[BUFFER_SIZE];
@@ -108,13 +135,13 @@ simpleThread_group_init(group_one, 2) {
 // All inits for LCD control
 #if defined(LCD_4BIT)
    #include <LiquidCrystal.h>   // LCD
-   LiquidCrystal myLCD(12, 11, 4, 5, 6, 7);
+   LiquidCrystal myLCD(LCD_EN, LCD_RW, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
 #elif defined(LCD_ADDR)
    #include <Wire.h>                // I2C Communication
    #include <LiquidCrystal_I2C.h>   // LCD over I2C
    // Set the pins on the I2C chip used for LCD connections:
    //                         addr, en,rw,rs,d4,d5,d6,d7,bl,blpol
-   LiquidCrystal_I2C myLCD(LCD_ADDR, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
+   LiquidCrystal_I2C myLCD(LCD_ADDR, LCD_EN, LCD_RW, LCD_RS, LCD_D4, LCD_D5, LCD_D6, LCD_D7, 3, POSITIVE);  // Set the LCD I2C address
 #endif
 
 
@@ -139,7 +166,7 @@ simpleThread_group_init(group_one, 2) {
 
 void setup() 
 { 
-   Serial.begin(38400);   // open serial to PC
+   Serial.begin(PC_SERIAL);   // open serial to PC
 
 	// read or save button analog values
 	get_button_values();
@@ -177,7 +204,7 @@ void setup()
    delay(2000);
    
    // open serial port to GRBL
-   grblSerial.begin(9600); // open serial to grbl
+   grblSerial.begin(GRBL_SERIAL); // open serial to grbl
    // reset grbl device (ctrl-X) for Universal Gcode Sender
    grblSerial.write(0x18);
 
@@ -214,7 +241,7 @@ void loop()
       // dont send data from $G to Serial, 
       // cuz UGS don't understand this
       // dont send data if string empty
-      if(grserial[0] != '[' || grserial[0] != '\0'){
+      if(grserial[0] != '['){
          Serial.print(c);
       }
    }
@@ -237,7 +264,7 @@ void loop()
       }
 
       // dont send serial commands (:char) to grbl
-      if(pcserial[0] != ':' || pcserial[0] != '\0'){
+      if(pcserial[0] != ':'){
 	      grblSerial.print(c);
       }
    }
