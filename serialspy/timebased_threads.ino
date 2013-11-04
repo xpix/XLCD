@@ -21,7 +21,7 @@ void simpleThread_setup(readButtons)
 boolean simpleThread_loop(readButtons)
 {
 	byte button = ReadButton();
-	if(button && button < 20 && buttonJustPressed){
+	if(button >= 0 && button < 50){
 		call_button(button);
 	}
     

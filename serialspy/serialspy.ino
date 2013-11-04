@@ -34,8 +34,8 @@
                      // (no buttons, no serial console, no interaction with grbl)
 
 // Serial speed ----------------------------------
-#define PC_SERIAL       9600
-#define GRBL_SERIAL     19200
+#define PC_SERIAL       19200
+#define GRBL_SERIAL     9600
 
 // LCD -------------------------------------------
 #define LCD_ADDR		   0x27  // I2C LCD Address
