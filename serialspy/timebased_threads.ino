@@ -20,11 +20,14 @@ void simpleThread_setup(readButtons)
 
 boolean simpleThread_loop(readButtons)
 {
+
+#if defined(BUTTONS_A_ADC_PIN)
 	byte button = ReadButton();
 	if(button >= 0 && button < 50){
 		call_button(button);
 	}
-    
+#endif    
+
 	return false;    
 }
 
@@ -42,6 +45,12 @@ void simpleThread_setup(getPositions)
 
 boolean simpleThread_loop(getPositions)
 {
+
+   // Test when called last time and if this time less the interval time,
+   if((millis() - lastCall) < simpleThread_dynamic_getLoopTime(getPositions)){
+      return false;
+   }
+
 	// output counter value
 	grblSerial.print('?');
 

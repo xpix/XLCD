@@ -11,26 +11,33 @@ void parse_command_line(char* line)
 {
    if( line[1] == '?' ){
       // Display Menu from this device
-      Serial.println(F("<XLCD 0.1 menu>"));
+      Serial.print(F("<XLCD "));
+      Serial.print(VERSION);
+      Serial.println(F(" MENU>"));
 
       Serial.println(F("<:b nr\tCall Button nr>"));
+      #ifdef BUTTONS_A_ADC_PIN
       Serial.println(F("<:l\tLearn button values>"));
+      #endif
       Serial.println(F("<:i ms\tSet or get interval in microseconds>"));
 
-#ifdef DEBUG
+      #ifdef DEBUG
       Serial.println(F("<:s\tshow button values>"));
-#endif
+      #endif
 
       Serial.println(F("<:r\tReset device>"));
       Serial.println(F("<:v\tAbout>"));
       return;
    }
    // Commands handle:
-#ifdef DEBUG
+   #ifdef DEBUG
 	if( line[1] == 's') return show_button();
 	if( line[1] == 'f') return free_ram();
-#endif
+	if( line[1] == 't') Serial.print(state());return;
+   #endif
+   #ifdef BUTTONS_A_ADC_PIN
    if( line[1] == 'l') return learn_button();
+   #endif
    if( line[1] == 'b') return press_button(line);
    if( line[1] == 'i') return setinterval(line);
    if( line[1] == 'r') return resetDevice(0);
@@ -41,25 +48,27 @@ void parse_command_line(char* line)
 }
 
 #ifdef DEBUG
-	void show_button(){
-		Serial.println(F("show buttons ... "));
-		for (int i = 0; i < COUNT_OF(button_power); i++)
-		{
-			int value = get_set_button_power(i, 0);
-			Serial.print("Button ");
-			Serial.print(i);
-			Serial.print(" ");
-			Serial.println(value);
-		}
-	}
 
-	void free_ram(){
-		Serial.print(F("Free ram: "));
-		Serial.println(freeRam());
+void show_button(){
+	Serial.println(F("show buttons ... "));
+	for (int i = 0; i < COUNT_OF(button_power); i++)
+	{
+		int value = get_set_button_power(i, 0);
+		Serial.print("Button ");
+		Serial.print(i);
+		Serial.print(" ");
+		Serial.println(value);
 	}
+}
+
+void free_ram(){
+	Serial.print(F("Free ram: "));
+	Serial.println(freeRam());
+}
 
 #endif
 
+#ifdef BUTTONS_A_ADC_PIN
 
 void learn_button(){
 
@@ -80,19 +89,21 @@ void learn_button(){
    		if(buttonVoltage < 1000 && buttonVoltage != oldbuttonVoltage) 
    			break;
 		};
-#ifdef DEBUG
+      #ifdef DEBUG
       Serial.print(F("<Set Button: "));
       Serial.print(i);
       Serial.print(F(" to: "));
       Serial.print(buttonVoltage);
       Serial.println(F(">"));
-#endif
+      #endif
 		get_set_button_power(i, buttonVoltage);
    }
    Serial.println(F("<Button values saved!>"));
 
    simpleThread_group_restart(group_one);
 }
+
+#endif
 
 
 void press_button(char* line){

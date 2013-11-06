@@ -7,7 +7,7 @@
  * Last edit: 30.08.2013
  */ 
 
-unsigned long last_status = 0;
+unsigned long lastCall = 0;
 
 void parse_status_line(char* line)
 {
@@ -30,7 +30,8 @@ void parse_status_line(char* line)
    char* temp = split(line, delim, 0);
    myLCD.setCursor(0,0); // letter, row
    myLCD.print(temp);
-
+   state(temp);
+   
    // X Machine position ...
    temp = split(line, delim, 2);
    myLCD.setCursor(0,1);
@@ -47,6 +48,8 @@ void parse_status_line(char* line)
    len = strlen(temp);
    myLCD.setCursor((LCD_cols - len),0);
    myLCD.print(temp);
+
+   lastCall = millis();
 }
 
 // send every second the command $G

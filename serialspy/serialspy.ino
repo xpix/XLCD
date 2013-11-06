@@ -69,8 +69,8 @@
    #define ENC_S              10    // Encoder select pin
 
    // Buttons ---------------------------------------
-   #define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
-   #define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
+   //#define BUTTONS_A_ADC_PIN  A0    // A0 is the button ADC input A
+   //#define BUTTONS_B_ADC_PIN  A1    // A1 is the button ADC input B
    //#define BUTTONS_C_ADC_PIN  A2    // A2 is the button ADC input C [optional]
    //#define BUTTONS_D_ADC_PIN  A3    // A3 is the button ADC input D [optional]
    #define BUTTONHYSTERESIS   10    // hysteresis for valid button sensing window
@@ -95,6 +95,13 @@
 #define GRBL_RX			8
 #define GRBL_TX			9 
 
+#define IDLE            1
+#define QUEUE           2
+#define RUN             3
+#define HOLD            4
+#define HOME            5
+#define ALARM           6
+#define CHECK           7
 
 // Measure Power on when pressed button and note this value here
 // use resistor network 680 Ohm
@@ -107,8 +114,6 @@ byte				buttonJustPressed  = false;         //this will be true after a ReadButt
 byte				buttonJustReleased = false;         //this will be true after a ReadButtons() call if triggered
 byte				buttonWas          = 0;             //used by ReadButtons() for detection of button events
 volatile byte  button_pressed;
-char				pcserial[BUFFER_SIZE];
-char				grserial[BUFFER_SIZE];
 
 /* 
  * ===============================================
@@ -122,7 +127,7 @@ AltSoftSerial grblSerial;
 #define _sT_cnt  _sT_cnt_3    // count of threads(?, $G)
 simpleThread_init(_sT_cnt);   // init threads
 simpleThread_new_timebased_dynamic  (_sT_P1  , _sT_millis, 5000, _sT_start ,  getPositions);	// get position info (?)
-simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 6000, _sT_start ,  getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
+simpleThread_new_timebased_dynamic  (_sT_P2  , _sT_millis, 5000, _sT_start ,  getStates);	// get state info ($G) (not supported from UniversalGcodeSender)
 simpleThread_new_timebased_dynamic  (_sT_P3  , _sT_millis,  200, _sT_start ,  readButtons);	// get button value
 
 // make a group
@@ -217,6 +222,8 @@ void setup()
 /*  ---------- Loop ----------- */
 int pc = 0;
 int gr = 0;
+char pcserial[BUFFER_SIZE];
+char grserial[BUFFER_SIZE];
 
 void loop() 
 { 
@@ -224,7 +231,7 @@ void loop()
    simpleThread_run(_sT_priority);
 
    // Get data from GRBL ==> PC
-   if (grblSerial.available()) {
+   while(grblSerial.available()) {
       char c = grblSerial.read();
    
       // wait for a complete line 
@@ -232,6 +239,7 @@ void loop()
       if(c == '\n'){
          parseGrblLine(grserial);
    		gr = 0;
+         memset(&grserial[0], 0, sizeof(grserial));
          grserial[0] = '\0';
       } else {
    		if(gr < BUFFER_SIZE)
@@ -247,7 +255,7 @@ void loop()
    }
 
   // Get data from PC ==> GRBL
-   if (Serial.available()) {
+   while(Serial.available()) {
       char c = Serial.read();
       
       // wait for a complete line
@@ -255,6 +263,7 @@ void loop()
       if(c == '\n'){
          parsePCCommand(pcserial);
          pc = 0;
+         memset(&pcserial[0], 0, sizeof(pcserial));
          pcserial[0] = '\0';
       } else {
          // if to big ...
@@ -303,7 +312,7 @@ void parsePCCommand(char* line){
   *c2 = ' ';
 
   // All commands with an ':' at start can control XLCD 
-  if( line[0] == ':' )  parse_command_line(line);
+  if( line[0] == ':')  parse_command_line(line);
 }
 
 // Analyze every line and choose an action
@@ -313,4 +322,23 @@ void parseGrblLine(char* line){
 
   if( line[0] == '<' )  parse_status_line(line);
   if( line[0] == '[' )  parse_state_line(line);
+}
+
+// State set or get state from machine
+int status = 0;
+
+int state(char* tmp){
+   if(strcmp(tmp, "Idle")==0)    status = IDLE;
+   if(strcmp(tmp, "Queue")==0)   status = QUEUE;
+   if(strcmp(tmp, "Run")==0)     status = RUN;
+   if(strcmp(tmp, "Hold")==0)    status = HOLD;
+   if(strcmp(tmp, "Home")==0)    status = HOME;
+   if(strcmp(tmp, "Alarm")==0)   status = ALARM;
+   if(strcmp(tmp, "Check")==0)   status = CHECK;
+
+   return status;
+}
+
+int state(){
+   return status;
 }

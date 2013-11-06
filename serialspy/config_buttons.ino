@@ -8,6 +8,14 @@
  */ 
 
 void call_button(byte number){
+
+   if(state() != IDLE){
+      Serial.println(F("<Grbl not in idle mode!>"));
+      myLCD.clear();
+      myLCD.print(F("<Grbl not in idle mode!>"));
+      return;
+   }
+
    switch (number)
    {
       case 0: call_button_0(); break;
@@ -101,23 +109,9 @@ byte ReadButton()
 	}
 #endif
 
-   //read the button ADC pin voltage first on A then on B
-   char buttonrow = 'A';
-   unsigned int buttonVoltage = analogRead( BUTTONS_A_ADC_PIN );
-   if(buttonVoltage <= 1000 + BUTTONHYSTERESIS){
-	   // test all values to discover button
-	   for (int i = COUNT_OF(button_power); i >= 0 ; i--) {
-		  if( buttonVoltage < ( get_set_button_power(i,0) + BUTTONHYSTERESIS ) )
-		  {
-			 button = i;
-		  }
-	   }   
-   }
+#ifdef BUTTONS_A_ADC_PIN
+   button = checkAnalogPin(BUTTONS_A_ADC_PIN);
 
-   if( buttonrow == 'B'){
-      button = button + 10;
-   }
-   
    //handle button flags for just pressed and just released events
    if( ( buttonWas == BUTTON_NONE ) && ( button != BUTTON_NONE ) )
    {
@@ -131,14 +125,12 @@ byte ReadButton()
       buttonJustPressed  = false;
       buttonJustReleased = true;
    }
+#endif
 
 #ifdef DEBUG
-   if(buttonWas != button && button < 20){
+   if(buttonWas != button && button < 40){
       Serial.print(F("<Pushed Button: "));
       Serial.print(button);
-      Serial.println(F(">"));
-      Serial.print(F("<Buttonvoltage: "));
-      Serial.print(buttonVoltage);
       Serial.println(F(">"));
    }
 #endif
@@ -148,3 +140,26 @@ byte ReadButton()
    
    return( button );
 }   
+
+byte checkAnalogPin(byte PIN){
+   byte button = -1;
+   unsigned int buttonVoltage = analogRead( PIN );
+   if(buttonVoltage <= 1000 + BUTTONHYSTERESIS){
+
+#ifdef DEBUG
+      Serial.print(F("<Buttonvoltage: "));
+      Serial.print(buttonVoltage);
+      Serial.println(F(">"));
+#endif
+
+	   // test all values to discover button
+	   for (int i = COUNT_OF(button_power); i >= 0 ; i--) {
+		  if( buttonVoltage < ( get_set_button_power(i,0) + BUTTONHYSTERESIS ) )
+		  {
+			 button = i;
+		  }
+	   }   
+      return button;
+   }
+   return -1;
+}
