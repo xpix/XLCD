@@ -26,22 +26,19 @@ void parse_command_line(char* line)
       #endif
 
       Serial.println(F("<:r\tReset device>"));
-      Serial.println(F("<:v\tAbout>"));
       return;
    }
    // Commands handle:
    #ifdef DEBUG
 	if( line[1] == 's') return show_button();
 	if( line[1] == 'f') return free_ram();
-	if( line[1] == 't') Serial.print(state());return;
    #endif
    #ifdef BUTTONS_A_ADC_PIN
    if( line[1] == 'l') return learn_button();
-   #endif
    if( line[1] == 'b') return press_button(line);
+   #endif
    if( line[1] == 'i') return setinterval(line);
    if( line[1] == 'r') return resetDevice(0);
-   if( line[1] == 'v') return about();
 
    Serial.print(F("Cant parse this command: "));
    Serial.println(line);
@@ -103,9 +100,6 @@ void learn_button(){
    simpleThread_group_restart(group_one);
 }
 
-#endif
-
-
 void press_button(char* line){
    int button = atoi(split(line, " ", 1));
    if(button == 0){
@@ -114,28 +108,39 @@ void press_button(char* line){
    }      
 
    call_button(button);
-   Serial.print(F("<Button: "));
-   Serial.print(button);
-   Serial.println(F(" pressed>"));
 }
+
+#endif
 
 void setinterval(char* line){
    int ms = atoi(split(line, " ", 1));
-   if(ms){
-      setinterval_ms(ms);
+   if(ms > 0 || ms == -1){
+      setinterval(ms);
+   }
+   else{
+      Serial.print(F("<Interval: "));
+      Serial.print(EEPROMReadInt(EEPROM_INTERVAL));
+      Serial.println(F(">"));
    }
 }
 
-void setinterval_ms(int ms){
-   if(ms){
-		EEPROMWriteInt(EEPROM_INTERVAL, ms);
-      simpleThread_dynamic_setLoopTime(getPositions, ms);
-      simpleThread_dynamic_setLoopTime(getStates, ms);
-	}
-
+void setinterval(int ms){
    Serial.print(F("<Interval: "));
    Serial.print(ms);
    Serial.println(F(">"));
+
+   EEPROMWriteInt(EEPROM_INTERVAL, ms);
+
+   if(ms == -1){
+      simpleThread_group_stop(group_one);
+      return;
+   }
+   if(ms > 0){
+      simpleThread_dynamic_setLoopTime(getPositions, ms);
+      simpleThread_dynamic_setLoopTime(getStates, ms);
+
+      simpleThread_group_restart(group_one);
+	} 
 }
 
 void resetDevice(int n){
@@ -143,10 +148,4 @@ void resetDevice(int n){
    grblSerial.write(0x18);
    delay(100);
    asm volatile ("jmp 0x0000");
-}
-
-void about(){
-   Serial.println(F("<XLCD 0.1 / 2013>"));
-   Serial.println(F("<Frank Herrmann / 2013>"));
-   Serial.println(F("<https://github.com/Xpix>"));
 }

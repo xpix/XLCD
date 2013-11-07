@@ -7,6 +7,8 @@
  * Last edit: 30.08.2013
  */ 
 
+#ifdef BUTTONS_A_ADC_PIN
+
 void call_button(byte number){
 
    if(state() != IDLE){
@@ -15,6 +17,12 @@ void call_button(byte number){
       myLCD.print(F("<Grbl not in idle mode!>"));
       return;
    }
+
+   #ifdef DEBUG
+   Serial.print(F("<Button: "));
+   Serial.print(number);
+   Serial.println(F(" called>"));
+   #endif
 
    switch (number)
    {
@@ -28,14 +36,14 @@ void call_button(byte number){
       case 7: call_button_7(); break;
 
 		// row B +10
-      case 10: call_button_A(); break;
-      case 11: call_button_B(); break;
-      case 12: call_button_C(); break;
-      case 13: call_button_D(); break;
-      case 14: call_button_E(); break;
-      case 15: call_button_F(); break;
-      case 16: call_button_G(); break;
-      case 17: call_button_F(); break;
+      case 10: call_button_10(); break;
+      case 11: call_button_11(); break;
+      case 12: call_button_12(); break;
+      case 13: call_button_13(); break;
+      case 14: call_button_14(); break;
+      case 15: call_button_15(); break;
+      case 16: call_button_16(); break;
+      case 17: call_button_17(); break;
    }
 }
 
@@ -53,7 +61,7 @@ void call_button_1() {
    
    // Display action on LCD
    myLCD.clear();
-   myLCD.print("Homing ...");
+   myLCD.print(F("Homing ..."));
 };
 
 void call_button_2() {
@@ -68,18 +76,18 @@ void call_button_6(){ };
 void call_button_7(){ };
 
 // Second Button row
-void call_button_A(){ };
-void call_button_B(){ };
-void call_button_C(){ };
-void call_button_D(){ };
-void call_button_E(){ };
-void call_button_F(){ };
-void call_button_G(){ };
+void call_button_10(){ };
+void call_button_11(){ };
+void call_button_12(){ };
+void call_button_13(){ };
+void call_button_14(){ };
+void call_button_15(){ };
+void call_button_16(){ };
+
+#endif
 
 
 long encoderPosition  = -999;
-
-
 /*--------------------------------------------------------------------------------------
   ReadButton()
   Detect the button pressed and return the value

@@ -34,7 +34,7 @@
                      // (no buttons, no serial console, no interaction with grbl)
 
 // Serial speed ----------------------------------
-#define PC_SERIAL       19200
+#define PC_SERIAL       19200 // must be faster as grbl!
 #define GRBL_SERIAL     9600
 
 // LCD -------------------------------------------
