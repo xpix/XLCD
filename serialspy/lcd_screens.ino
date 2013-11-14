@@ -9,6 +9,13 @@
 
 unsigned long lastCall = 0;
 
+#if(LCD_cols==16)
+#define LCD_EMPTY   F("                ")
+#elif
+#define LCD_EMPTY   F("                    ")
+#endif
+
+
 void parse_status_line(char* line)
 {
    // <Idle,MPos:5.529,0.560,7.000,WPos:1.529,-5.440,-0.000>
@@ -23,10 +30,10 @@ void parse_status_line(char* line)
    //myLCD.clear();
 
 	char delim[] = "<,:";
-
+   
    // State ..
    myLCD.setCursor(0,0); // letter, row
-   myLCD.print("     ");
+   myLCD.print(LCD_EMPTY);
    char* temp = split(line, delim, 0);
    myLCD.setCursor(0,0); // letter, row
    myLCD.print(temp);
@@ -34,6 +41,8 @@ void parse_status_line(char* line)
    
    // X Machine position ...
    temp = split(line, delim, 2);
+   myLCD.setCursor(0,1);
+   myLCD.print(LCD_EMPTY);
    myLCD.setCursor(0,1);
    myLCD.print(temp);
 
@@ -71,6 +80,8 @@ void parse_state_line(char* myBuffer)
    if( strcmp(temp, "M5")!=0) 
       temp = "Off";
    myLCD.setCursor(0,2); //third row
+   myLCD.print(LCD_EMPTY);
+   myLCD.setCursor(0,2); //third row
    myLCD.print(temp);
 
    myLCD.print(" ");
@@ -95,6 +106,8 @@ void parse_state_line(char* myBuffer)
    myLCD.print(strcat(temp,"mm/s"));
 
    // next line
+   myLCD.setCursor(0,3); //third row
+   myLCD.print(LCD_EMPTY);
    myLCD.setCursor(0,3);
 
    // mm or inch

@@ -38,10 +38,10 @@
 #define GRBL_SERIAL     9600
 
 // LCD -------------------------------------------
-#define LCD_ADDR		   0x27  // I2C LCD Address
-//#define LCD_4BIT
+//#define LCD_ADDR		   0x27  // I2C LCD Address
+#define LCD_4BIT
 
-#define LCD_cols			20
+#define LCD_cols			16
 #define LCD_rows			4
 
 #if defined(LCD_4BIT)
