@@ -182,7 +182,7 @@ void setup()
 #endif
 
    /* init threads */
-	simpleThread_initSetup(_sT_cnt);
+   simpleThread_initSetup(_sT_cnt);
    //simpleThread_dynamic_setLoopTime(getPositions,	EEPROMReadInt(EEPROM_INTERVAL));
    //simpleThread_dynamic_setLoopTime(getStates,		EEPROMReadInt(EEPROM_INTERVAL));
 
@@ -228,7 +228,7 @@ char grserial[BUFFER_SIZE];
 void loop() 
 { 
    // Jobs
-   simpleThread_run(_sT_priority);
+   // simpleThread_run(_sT_priority);
 
    // Get data from GRBL ==> PC
    while(grblSerial.available()) {
