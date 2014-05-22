@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -9515,6 +9515,8 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <part name="X1" library="con-tycoelectronics" deviceset="RJ45" device="" technology="-6L-B"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
+<part name="H1" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8" value="MOUNT-PAD-ROUND2.8"/>
+<part name="H2" library="holes" deviceset="MOUNT-PAD-ROUND" device="2.8" value="MOUNT-PAD-ROUND2.8"/>
 </parts>
 <sheets>
 <sheet>
@@ -9624,12 +9626,14 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <instance part="ICSP" gate="A" x="180.34" y="20.32"/>
 <instance part="GND5" gate="1" x="191.77" y="11.43"/>
 <instance part="Q1" gate="G$1" x="20.32" y="2.54" rot="R270"/>
-<instance part="LED" gate="G$1" x="96.52" y="5.08" rot="R90"/>
-<instance part="GND9" gate="1" x="104.14" y="5.08" rot="R90"/>
-<instance part="R6" gate="G$1" x="88.9" y="5.08"/>
+<instance part="LED" gate="G$1" x="96.52" y="17.78" rot="R90"/>
+<instance part="GND9" gate="1" x="104.14" y="17.78" rot="R90"/>
+<instance part="R6" gate="G$1" x="88.9" y="17.78"/>
 <instance part="X1" gate="G$1" x="167.64" y="-12.7"/>
 <instance part="GND11" gate="1" x="162.56" y="0" rot="R180"/>
 <instance part="P+2" gate="VCC" x="160.02" y="-17.78" rot="R90"/>
+<instance part="H1" gate="G$1" x="208.28" y="7.62"/>
+<instance part="H2" gate="G$1" x="208.28" y="30.48"/>
 </instances>
 <busses>
 </busses>
@@ -9784,13 +9788,19 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <wire x1="208.28" y1="15.24" x2="205.74" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="205.74" y1="15.24" x2="241.3" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="15.24" x2="241.3" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="241.3" y1="5.08" x2="241.3" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="5.08" x2="241.3" y2="7.62" width="0.1524" layer="91"/>
 <junction x="241.3" y="15.24"/>
 <pinref part="GND24" gate="1" pin="GND"/>
 <pinref part="H7" gate="G$1" pin="MOUNT"/>
 <junction x="205.74" y="22.86"/>
 <pinref part="H5" gate="G$1" pin="MOUNT"/>
 <junction x="205.74" y="15.24"/>
+<wire x1="241.3" y1="7.62" x2="241.3" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="30.48" x2="241.3" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="241.3" y1="30.48" x2="241.3" y2="22.86" width="0.1524" layer="91"/>
+<junction x="241.3" y="22.86"/>
+<wire x1="208.28" y1="7.62" x2="241.3" y2="7.62" width="0.1524" layer="91"/>
+<junction x="241.3" y="7.62"/>
 </segment>
 <segment>
 <pinref part="R1" gate="R?" pin="CW"/>
@@ -9960,9 +9970,9 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <label x="83.82" y="-33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ICSP" gate="A" pin="4"/>
-<wire x1="185.42" y1="20.32" x2="193.04" y2="20.32" width="0.1524" layer="91"/>
-<label x="193.04" y="20.32" size="1.778" layer="95"/>
+<pinref part="ICSP" gate="A" pin="1"/>
+<wire x1="177.8" y1="22.86" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
+<label x="157.48" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="USB_RXD" class="0">
@@ -10124,33 +10134,33 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <label x="20.32" y="78.74" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="ICSP" gate="A" pin="1"/>
-<wire x1="177.8" y1="22.86" x2="167.64" y2="22.86" width="0.1524" layer="91"/>
-<label x="157.48" y="22.86" size="1.778" layer="95"/>
+<pinref part="ICSP" gate="A" pin="4"/>
+<wire x1="185.42" y1="20.32" x2="193.04" y2="20.32" width="0.1524" layer="91"/>
+<label x="193.04" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="BUTTONS_C" class="0">
-<segment>
-<pinref part="328P" gate="G$1" pin="PC2(ADC2)"/>
-<wire x1="81.28" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<label x="86.36" y="17.78" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="BTN_C/D" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="-40.64" x2="129.54" y2="-40.64" width="0.1524" layer="91"/>
 <label x="124.46" y="-40.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="328P" gate="G$1" pin="ADC6"/>
+<wire x1="81.28" y1="7.62" x2="86.36" y2="7.62" width="0.1524" layer="91"/>
+<label x="86.36" y="7.62" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="BUTTONS_D" class="0">
-<segment>
-<pinref part="328P" gate="G$1" pin="PC3(ADC3)"/>
-<wire x1="81.28" y1="15.24" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
-<label x="86.36" y="15.24" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="BTN_C/D" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="-43.18" x2="129.54" y2="-43.18" width="0.1524" layer="91"/>
 <label x="124.46" y="-43.18" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="328P" gate="G$1" pin="ADC7"/>
+<wire x1="81.28" y1="5.08" x2="86.36" y2="5.08" width="0.1524" layer="91"/>
+<label x="86.36" y="5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$23" class="0">
@@ -10326,9 +10336,9 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="328P" gate="G$1" pin="ADC7"/>
+<pinref part="328P" gate="G$1" pin="PC2(ADC2)"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="81.28" y1="5.08" x2="83.82" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="17.78" x2="83.82" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
